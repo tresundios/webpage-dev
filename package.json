@@ -1,7 +1,7 @@
 {
-    "title": "Landing Page",
-    "name": "startbootstrap-landing-page",
-    "version": "6.0.6",
+    "title": "Le Gily",
+    "name": "le-gily-project",
+    "version": "1",
     "scripts": {
         "build": "npm run clean && npm run build:pug && npm run build:scss && npm run build:scripts && npm run build:assets",
         "build:assets": "node scripts/build-assets.js",
@@ -12,31 +12,19 @@
         "start": "npm run build && node scripts/start.js",
         "start:debug": "npm run build && node scripts/start-debug.js"
     },
-    "description": "An HTML landing page template built with Bootstrap",
-    "keywords": [
-        "css",
-        "sass",
-        "html",
-        "responsive",
-        "theme",
-        "template"
-    ],
-    "homepage": "https://startbootstrap.com/theme/landing-page",
-    "bugs": {
-        "url": "https://github.com/StartBootstrap/startbootstrap-landing-page/issues",
-        "email": "feedback@startbootstrap.com"
-    },
+    "description": "Le Gily Project",
     "license": "MIT",
     "author": "Start Bootstrap",
     "contributors": [
-        "David Miller (https://davidmiller.io/)"
+        "Navis Michael Bearly J - Tresundios (https://tresundios.com/)"
     ],
     "repository": {
         "type": "git",
-        "url": "https://github.com/StartBootstrap/startbootstrap-landing-page.git"
+        "url": "https://github.com/tresundios/webpage-dev.git"
+        
     },
     "dependencies": {
-        "bootstrap": "5.2.3"
+        "bootstrap": "5.3.3"
     },
     "devDependencies": {
         "autoprefixer": "10.4.14",

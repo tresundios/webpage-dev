@@ -1,0 +1,88 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Global Header
+--------------------------------------------------------------*/
+.header {
+  --background-color: rgba(0, 0, 0, 0.8);
+  --heading-color: #ffffff;
+  --contrast-color: #ffffff;
+  color: var(--default-color);
+  background-color: var(--background-color);
+  //padding: 10px 0;
+  transition: all 0.5s;
+  z-index: 997;
+  padding-top: 1rem;
+
+  .logo {
+    line-height: 1;
+
+    img {
+      width: 92px;
+      height: 112px;
+    }
+
+    h1 {
+      font-size: 32px;
+      margin: 0;
+      font-weight: 700;
+      color: var(--heading-color);
+    }
+
+    span {
+      color: var(--accent-color);
+      font-size: 32px;
+    }
+  }
+
+  .icon-circle {
+    font-size: 1.5rem;
+    background-color: #f0f0f0; // Change to preferred background color
+    border-radius: 50%;
+    padding: 0.5rem; // Adjust padding to control circle size
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media (max-width: 1200px) {
+    .logo {
+      order: 1;
+    }
+
+    .cart-icons {
+      order: 2;
+      margin: 0 15px 0 0;
+      padding: 6px 15px;
+    }
+
+    .icon-circle {
+      font-size: 1.5rem;
+      background-color: #f0f0f0; // Change to preferred background color
+      border-radius: 50%;
+      padding: 0.5rem; // Adjust padding to control circle size
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .navmenu {
+      order: 3;
+    }
+  }
+
+  .scrolled & {
+    box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
+  }
+}
+
+/* Index Page Header
+------------------------------*/
+.index-page .header {
+  --background-color: rgba(0, 0, 0, 0);
+}
+
+/* Index Page Header on Scroll
+------------------------------*/
+.index-page.scrolled .header {
+  --background-color: rgba(0, 0, 0, 0.8);
+}
