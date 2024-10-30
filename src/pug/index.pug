@@ -11,7 +11,7 @@ html(lang='en')
         title Le Gily - Home
 
         // Favicon
-        link(rel='icon', type='image/x-icon', href='assets/favicon.ico')
+        link(rel='icon', type='image/x-icon', href='assets/logo.ico')
 
         // Bootstrap Main
         link(href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css', rel='stylesheet', type='text/css')
@@ -29,7 +29,7 @@ html(lang='en')
         link(href="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.3.0/css/glightbox.min.css", rel='stylesheet', type='text/css')
 
         // Google fonts
-        link(href='https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap', rel='stylesheet', type='text/css')
+        link(href='https://fonts.googleapis.com/css2?family=Poppins:wght@200,400;500&display=swap', rel='stylesheet', type='text/css')
 
         // Core theme CSS (includes Bootstrap)
         link(href='css/styles.css', rel='stylesheet')
@@ -58,13 +58,85 @@ html(lang='en')
                     a.d-flex.align-items-center(href='#')
                         i.bi.bi-cart.icon-circle
         main.main
-            // Hero Section
-            section#hero.hero
-                img(src='assets/legily/hero-bg.png', alt='', data-aos='fade-in')
-                .hero-text.row(data-aos='fade-up', data-aos-delay='100')
-                    .col-12.text-start 
-                        h2
-                            | Where science meets skincare.
+            .container-fluid.container-xl.position-relative.d-flex.justify-content-between
+                // Hero Section
+                section#hero.hero
+                    img(src='assets/legily/hero-bg.png', alt='', data-aos='fade-in')
+                    .hero-content(data-aos='fade-up', data-aos-delay='100').me-auto.me-lg-0
+                        .row.hero-text
+                            .col.left-content
+                                h2 Where science meets skincare
+                                span.cta-text
+                                    p Enhance your inner and outer beauty 
+                                        br
+                                        | with Le Gily’s science -backed self-
+                                        br
+                                        | care. 
+                                    a.btn.btn-lg.cta-btn(href='#', role='button') View Products
+                                span.cta-space
+                                span.cta-text
+                                    p Experience tranquility with our Anti-
+                                        br
+                                        | Stress Serum, Transform your response 
+                                        br
+                                        | to everyday stress with our serum. 
+                                    a.btn.btn-lg.cta-btn(href='#', role='button') Buy now
+                            .col.right-content
+                                div.values-read-more 
+                                    span
+                                        p.value-item Epigenetic Formulations
+                                        a.cta-learn-more(href='#', class='btn btn-link')
+                                            | Learn More
+                                            i.bi.bi-arrow-right
+                                    span
+                                        p.value-item Science-backed Products
+                                        a.cta-learn-more(href='#', class='btn btn-link')
+                                            | Learn More
+                                            i.bi.bi-arrow-right
+                                    span
+                                        p.value-item Crafted with Eco-Cert Ingredients
+                                        a.cta-learn-more(href='#', class='btn btn-link') Learn More
+                                            i.bi.bi-arrow-right
+                                    span 
+                                        p.value-item Sustainable and Certified Beauty
+                                        a.cta-learn-more(href='#', class='btn btn-link')
+                                            | Learn More
+                                            i.bi.bi-arrow-right
+
+        footer#footer.footer.dark-background
+            div.container-fluid.container-xl.position-relative.d-flex.align-items-center.justify-content-between
+                div.curved-rectangle
+                    div.rectangle-inside
+                        .row
+                            .col-4
+                                img(src='assets/legily/logo-white.png' alt='')
+                            .col-2 
+                                h2 information
+                            .col-2 
+                                h2 menu
+                            .col-4
+                                h2 request a call
+                        .row
+                            .col-12     
+                                p 
+            div.container-fluid.container-xl.position-relative.d-flex.align-items-center.justify-content-between
+                div.last-footer
+                    .row 
+                        .col-6 
+                            h2 If you didn’t find the products you are interested in or have questions?
+                        .col-6 
+                            p Just send us your contact email and we will contact you.
+                            p contact@legily.com
+
+                    .row
+                        .col-12 
+                            hr
+                            .copy 
+                                .row    
+                                    .col-6
+                                        p &copy; Copyright 2024 Li Gily
+                                    .col-6  
+                                        p.privacy privacy
 
         // Bootstrap core JS
         script(src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js')

@@ -6,7 +6,40 @@
   color: var(--default-color);
   background-color: var(--background-color);
   font-size: 14px;
-  position: relative;
+  //position: relative;
+
+  .curved-rectangle {
+    background-color: #434343; /* Adjust to desired background color */
+    border-radius: 20px; /* Adjust radius to control curve */
+    margin-top: 100px;
+    color: white; /* Text color */
+    width: 100%; /* Optional: control width */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Optional: adds a shadow for depth */
+    padding: 50px;
+  }
+
+  .last-footer {
+    
+    margin-top: 100px;
+    color: white; /* Text color */
+    width: 100%; /* Optional: control width */
+  }
+
+  .copy {
+    font-size: smaller;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  
+  .privacy {
+    text-align: right;
+  }
+  
+
+  h2 {
+      font-size: 24px; /* Adjust font size */
+      margin: 0; /* Remove default margin */
+  }
 
   .footer-top {
     padding: 50px 0;

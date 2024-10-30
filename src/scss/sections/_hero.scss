@@ -8,7 +8,6 @@
   width: 100%;
   min-height: 100vh;
   position: relative;
-  padding: 120px 0 80px 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -30,7 +29,7 @@
   h2 {
     margin: 0;
     font-size: 56px;
-    font-weight: 700;
+    font-weight: 500;
     font-family: var(--nav-font);
 
     span {
@@ -40,7 +39,7 @@
 
   p {
     margin: 10px 0 0 0;
-    font-size: 24px;
+    font-size: 14px;
     color: color-mix(in srgb, var(--default-color), transparent 30%);
   }
 
@@ -85,22 +84,117 @@
   }
 
   img {
-    position: absolute;
     inset: 0;
     display: block;
     z-index: 1;
   }
 
+  .hero-content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      align-items:flex-start;
+      justify-content:center;
+      color: #ffffff; /* Adjust text color as needed */
+      z-index: 2; /* Bring text content above the image */
+  }
+
   .hero-text {
-    z-index: 2;
-    text-align: left; // Set text alignment to left
+    margin-top: 200px; /* Offset the text 30% below the top of hero-content */
+    display: flex;
+   
+   
+  }
+
+  .left-content{
+    width: 45%; /* Adjust width to balance the text on each side */
     h2 {
-      font-weight: 500; // Medium weight
-      color: var(--nav-color);
+      width: 70%;
+      margin-bottom: 40px;
     }
   }
 
+  .right-content {
+    width: 45%; /* Adjust width to balance the text on each side */
+  }
   
+  .cta-btn {
+    font-family: var(--default-font);
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 12px 40px;
+    margin-top: 20px;
+    border-radius: 25px;
+    transition: 0.5s;
+    color: var(--surface-color);
+    background-color: var(--accent-color);
+  }
+  
+  .cta-btn:hover {
+    background: var(--accent-color);
+    color: var(--background-color);
+    border: 2px solid var(--accent-color);
+  }
+
+  .cta-text {
+    font-family: var(--default-font);
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--regular-text-color);
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .cta-space {
+    height: 50px;
+    display: block;
+  }
+
+  .values-read-more {
+    
+    padding-left: 50%;
+    padding-top: 15%;
+    span {
+      display: block; /* Each item will be on a new line */
+      margin-bottom: 50px; /* Add space between each item */
+  }
+  }
+
+  .value-item {
+    font-family: var(--default-font);
+    color: var(--nav-color);
+    font-weight: 200; /* Extra Light */
+    font-size: 20px; /* Font size */
+  }
+
+  .cta-learn-more {
+    font-style: italic;
+    margin-left: -10px;
+  }
+
+  .cta-learn-more {
+    display: inline-flex; /* Aligns icon with text */
+    text-decoration: none; /* Remove underline from the link */
+    color: var(--regular-text-color); /* Change link color to grey */
+    font-size: 16px; /* Font size */
+    
+    i {
+        margin-left: 8px; /* Space between text and icon */
+        transition: margin-left 0.2s; /* Smooth transition for hover effect */
+    }
+
+    &:hover {
+        color: darkgrey; /* Darker grey color on hover */
+        
+        i {
+            margin-left: 12px; /* Increase space on hover for effect */
+        }
+    }
+  }
 
   @media (max-width: 768px) {
     h2 {
@@ -118,7 +212,6 @@
       width: 950px; /* Set width */
       height: 951px; /* Set height */
       margin: 0 auto; /* Center the hero section */
-      padding-top: 34px;
     }
   }
 
@@ -127,7 +220,6 @@
       width: 650px; /* Set width */
       height: 651px; /* Set height */
       margin: 0 auto; /* Center the hero section */
-      padding-top: 44px;
     }
   }
 
@@ -136,7 +228,6 @@
       width: 500px; /* Set width */
       height: 501px; /* Set height */
       margin: 0 auto; /* Center the hero section */
-      padding-top: 54px;
     }
   }
 

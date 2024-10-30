@@ -1,6 +1,6 @@
 /*!
 * Start Bootstrap - Le Gily v1 (undefined)
-* Copyright 2013-2024 Start Bootstrap
+* Copyright 2013-2024 Navis Michael Bearly J - Tresundios
 * Licensed under MIT (https://github.com/StartBootstrap/le-gily-project/blob/master/LICENSE)
 */
 /**

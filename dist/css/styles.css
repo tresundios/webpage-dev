@@ -1,6 +1,6 @@
 /*!
 * Start Bootstrap - Le Gily v1 (undefined)
-* Copyright 2013-2024 Start Bootstrap
+* Copyright 2013-2024 Navis Michael Bearly J - Tresundios
 * Licensed under MIT (https://github.com/StartBootstrap/le-gily-project/blob/master/LICENSE)
 */
 /*--------------------------------------------------------------
@@ -22,6 +22,7 @@
   --accent-color: #A3C8C4; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #312f2f; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+  --regular-text-color: #9f9f9f;
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
@@ -36,7 +37,7 @@
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
 .dark-background {
-  --background-color: #060606;
+  --background-color: #2F2F2F;
   --default-color: #ffffff;
   --heading-color: #ffffff;
   --surface-color: #252525;
@@ -199,7 +200,8 @@ h6 {
 /* Index Page Header on Scroll
 ------------------------------*/
 .index-page.scrolled .header {
-  --background-color: rgba(0, 0, 0, 0.8);
+  --background-color: #ffffff;
+  opacity: 1;
 }
 
 /*--------------------------------------------------------------
@@ -430,7 +432,32 @@ h6 {
   color: var(--default-color);
   background-color: var(--background-color);
   font-size: 14px;
-  position: relative;
+}
+.footer .curved-rectangle {
+  background-color: #434343; /* Adjust to desired background color */
+  border-radius: 20px; /* Adjust radius to control curve */
+  margin-top: 100px;
+  color: white; /* Text color */
+  width: 100%; /* Optional: control width */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Optional: adds a shadow for depth */
+  padding: 50px;
+}
+.footer .last-footer {
+  margin-top: 100px;
+  color: white; /* Text color */
+  width: 100%; /* Optional: control width */
+}
+.footer .copy {
+  font-size: smaller;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.footer .privacy {
+  text-align: right;
+}
+.footer h2 {
+  font-size: 24px; /* Adjust font size */
+  margin: 0; /* Remove default margin */
 }
 .footer .footer-top {
   padding: 50px 0;
@@ -675,7 +702,7 @@ section,
 .section {
   color: var(--default-color);
   background-color: var(--background-color);
-  padding: 60px 0;
+  padding: 40px 0;
   scroll-margin-top: 80px;
   overflow: clip;
 }
@@ -727,7 +754,6 @@ section,
   width: 100%;
   min-height: 100vh;
   position: relative;
-  padding: 120px 0 80px 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -745,7 +771,7 @@ section,
 .hero h2 {
   margin: 0;
   font-size: 56px;
-  font-weight: 700;
+  font-weight: 500;
   font-family: var(--nav-font);
 }
 .hero h2 span {
@@ -753,7 +779,7 @@ section,
 }
 .hero p {
   margin: 10px 0 0 0;
-  font-size: 24px;
+  font-size: 14px;
   color: color-mix(in srgb, var(--default-color), transparent 30%);
 }
 .hero .icon-box {
@@ -791,18 +817,98 @@ section,
   color: var(--accent-color);
 }
 .hero img {
-  position: absolute;
   inset: 0;
   display: block;
   z-index: 1;
 }
-.hero .hero-text {
-  z-index: 2;
-  text-align: left;
+.hero .hero-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  align-items: flex-start;
+  justify-content: center;
+  color: #ffffff; /* Adjust text color as needed */
+  z-index: 2; /* Bring text content above the image */
 }
-.hero .hero-text h2 {
-  font-weight: 500;
+.hero .hero-text {
+  margin-top: 200px; /* Offset the text 30% below the top of hero-content */
+  display: flex;
+}
+.hero .left-content {
+  width: 45%; /* Adjust width to balance the text on each side */
+}
+.hero .left-content h2 {
+  width: 70%;
+  margin-bottom: 40px;
+}
+.hero .right-content {
+  width: 45%; /* Adjust width to balance the text on each side */
+}
+.hero .cta-btn {
+  font-family: var(--default-font);
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 12px 40px;
+  margin-top: 20px;
+  border-radius: 25px;
+  transition: 0.5s;
+  color: var(--surface-color);
+  background-color: var(--accent-color);
+}
+.hero .cta-btn:hover {
+  background: var(--accent-color);
+  color: var(--background-color);
+  border: 2px solid var(--accent-color);
+}
+.hero .cta-text {
+  font-family: var(--default-font);
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--regular-text-color);
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.hero .cta-space {
+  height: 50px;
+  display: block;
+}
+.hero .values-read-more {
+  padding-left: 50%;
+  padding-top: 15%;
+}
+.hero .values-read-more span {
+  display: block; /* Each item will be on a new line */
+  margin-bottom: 50px; /* Add space between each item */
+}
+.hero .value-item {
+  font-family: var(--default-font);
   color: var(--nav-color);
+  font-weight: 200; /* Extra Light */
+  font-size: 20px; /* Font size */
+}
+.hero .cta-learn-more {
+  font-style: italic;
+  margin-left: -10px;
+}
+.hero .cta-learn-more {
+  display: inline-flex; /* Aligns icon with text */
+  text-decoration: none; /* Remove underline from the link */
+  color: var(--regular-text-color); /* Change link color to grey */
+  font-size: 16px; /* Font size */
+}
+.hero .cta-learn-more i {
+  margin-left: 8px; /* Space between text and icon */
+  transition: margin-left 0.2s; /* Smooth transition for hover effect */
+}
+.hero .cta-learn-more:hover {
+  color: darkgrey; /* Darker grey color on hover */
+}
+.hero .cta-learn-more:hover i {
+  margin-left: 12px; /* Increase space on hover for effect */
 }
 @media (max-width: 768px) {
   .hero h2 {
@@ -817,7 +923,6 @@ section,
     width: 950px; /* Set width */
     height: 951px; /* Set height */
     margin: 0 auto; /* Center the hero section */
-    padding-top: 34px;
   }
 }
 @media (max-width: 1199px) {
@@ -825,7 +930,6 @@ section,
     width: 650px; /* Set width */
     height: 651px; /* Set height */
     margin: 0 auto; /* Center the hero section */
-    padding-top: 44px;
   }
 }
 @media (max-width: 768px) {
@@ -833,7 +937,6 @@ section,
     width: 500px; /* Set width */
     height: 501px; /* Set height */
     margin: 0 auto; /* Center the hero section */
-    padding-top: 54px;
   }
 }
 
