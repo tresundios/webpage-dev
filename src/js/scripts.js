@@ -73,7 +73,7 @@
   /**
    * Scroll top button
    */
-  /*
+  
   let scrollTop = document.querySelector('.scroll-top');
 
   function toggleScrollTop() {
@@ -91,7 +91,7 @@
 
   window.addEventListener('load', toggleScrollTop);
   document.addEventListener('scroll', toggleScrollTop);
-  */
+  
   /**
    * Animation on scroll function and init
    */
@@ -188,6 +188,18 @@
   });
 
   /**
+   * Navmenu blur on scroll
+   */
+  const navbar = document.getElementById("navmenu");
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 50) {
+      navbar.classList.add("scrolled");
+    } else {
+      navbar.classList.remove("scrolled");
+    }
+  });
+
+  /**
    * Navmenu Scrollspy
    */
   let navmenulinks = document.querySelectorAll('.navmenu a');
@@ -225,5 +237,25 @@
    //bind the event handler
    navLinks.forEach(a=>a.addEventListener('click',makeActive));
 
+   /**
+   * Frequently Asked Questions Toggle
+   */
+  document.querySelectorAll('.faq-item h3, .faq-item .faq-toggle').forEach((faqItem) => {
+    faqItem.addEventListener('click', () => {
+      faqItem.parentNode.classList.toggle('faq-active');
+    });
+  });
+
+
+  const navbarToggler = document.querySelector('.navbar-toggler');
+  const navbarCollapse = document.querySelector('.navbar-collapse');
+
+  // Toggle the navbar menu on click
+  // Ensure menu height on scroll if open
+  window.addEventListener('scroll', function() {
+    if (navbarCollapse.classList.contains('show')) {
+      navbarCollapse.style.maxHeight = '100vh'; // Retain full height on scroll
+    }
+  });
 })();
 

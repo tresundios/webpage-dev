@@ -36,8 +36,13 @@
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
+.light-background {
+  --background-color: #f9f9f9;
+  --surface-color: #ffffff;
+}
+
 .dark-background {
-  --background-color: #2F2F2F;
+  --background-color: #A3C8C4;
   --default-color: #ffffff;
   --heading-color: #ffffff;
   --surface-color: #252525;
@@ -200,8 +205,9 @@ h6 {
 /* Index Page Header on Scroll
 ------------------------------*/
 .index-page.scrolled .header {
-  --background-color: #ffffff;
-  opacity: 1;
+  -webkit-backdrop-filter: blur(50px);
+          backdrop-filter: blur(50px);
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 /*--------------------------------------------------------------
@@ -429,28 +435,44 @@ h6 {
 # Global Footer
 --------------------------------------------------------------*/
 .footer {
+  margin-top: 100px;
   color: var(--default-color);
   background-color: var(--background-color);
   font-size: 14px;
 }
 .footer .curved-rectangle {
-  background-color: #434343; /* Adjust to desired background color */
+  background-color: #163532; /* Adjust to desired background color */
   border-radius: 20px; /* Adjust radius to control curve */
-  margin-top: 100px;
+  margin-top: 50px;
   color: white; /* Text color */
   width: 100%; /* Optional: control width */
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Optional: adds a shadow for depth */
   padding: 50px;
 }
+.footer p {
+  font-size: 14px;
+}
 .footer .last-footer {
-  margin-top: 100px;
-  color: white; /* Text color */
+  margin-top: 40px;
+  color: #1d2021; /* Text color */
   width: 100%; /* Optional: control width */
 }
+.footer .last-footer p {
+  font-weight: 400;
+  font-size: 10px;
+}
+.footer .last-footer h2 {
+  font-weight: 300;
+  font-size: 24px;
+  color: #1d2021; /* Text color */
+}
+.footer h6 {
+  font-weight: 400;
+  font-size: 10px;
+  text-transform: uppercase;
+}
 .footer .copy {
-  font-size: smaller;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  font-size: 10px;
 }
 .footer .privacy {
   text-align: right;
@@ -703,6 +725,7 @@ section,
   color: var(--default-color);
   background-color: var(--background-color);
   padding: 40px 0;
+  margin-bottom: -80px;
   scroll-margin-top: 80px;
   overflow: clip;
 }
@@ -755,8 +778,7 @@ section,
   min-height: 100vh;
   position: relative;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  /* change img to video */
 }
 .hero:before {
   content: "";
@@ -816,10 +838,11 @@ section,
 .hero .icon-box:hover h3 a {
   color: var(--accent-color);
 }
-.hero img {
+.hero video {
   inset: 0;
   display: block;
   z-index: 1;
+  margin-left: auto;
 }
 .hero .hero-content {
   position: absolute;
@@ -836,15 +859,23 @@ section,
   margin-top: 200px; /* Offset the text 30% below the top of hero-content */
   display: flex;
 }
+.hero .hero-text .left-content, .hero .hero-text .right-content {
+  padding: 1rem;
+}
+@media (max-width: 576px) {
+  .hero .hero-text .left-content, .hero .hero-text .right-content {
+    padding: 0.5rem;
+  }
+}
 .hero .left-content {
-  width: 45%; /* Adjust width to balance the text on each side */
+  width: 65%; /* Adjust width to balance the text on each side */
 }
 .hero .left-content h2 {
   width: 70%;
   margin-bottom: 40px;
 }
 .hero .right-content {
-  width: 45%; /* Adjust width to balance the text on each side */
+  width: 55%; /* Adjust width to balance the text on each side */
 }
 .hero .cta-btn {
   font-family: var(--default-font);
@@ -859,6 +890,12 @@ section,
   color: var(--surface-color);
   background-color: var(--accent-color);
 }
+@media (max-width: 576px) {
+  .hero .cta-btn {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+  }
+}
 .hero .cta-btn:hover {
   background: var(--accent-color);
   color: var(--background-color);
@@ -867,10 +904,14 @@ section,
 .hero .cta-text {
   font-family: var(--default-font);
   font-weight: 400;
-  font-size: 14px;
+  font-size: 15px;
   color: var(--regular-text-color);
   padding-top: 40px;
   padding-bottom: 40px;
+}
+.hero .cta-text p {
+  width: 100%;
+  font-size: 15px;
 }
 .hero .cta-space {
   height: 50px;
@@ -878,7 +919,7 @@ section,
 }
 .hero .values-read-more {
   padding-left: 50%;
-  padding-top: 15%;
+  padding-top: 7%;
 }
 .hero .values-read-more span {
   display: block; /* Each item will be on a new line */
@@ -912,43 +953,195 @@ section,
 }
 @media (max-width: 768px) {
   .hero h2 {
-    font-size: 32px;
+    font-size: 16px;
   }
   .hero p {
-    font-size: 18px;
+    font-size: 12px;
+  }
+  .hero .values-read-more {
+    padding-left: 50%;
+  }
+  .hero .values-read-more span {
+    display: block; /* Each item will be on a new line */
+    margin-bottom: 25px; /* Add space between each item */
+  }
+  .hero .value-item {
+    font-family: var(--default-font);
+    color: var(--nav-color);
+    font-weight: 200; /* Extra Light */
+    font-size: 12px; /* Font size */
+  }
+  .hero .cta-learn-more {
+    font-size: 10px;
+    margin-left: -12px;
+  }
+  .hero .hero-text {
+    margin-top: 10rem; /* Offset the text 30% below the top of hero-content */
+    display: flex;
+  }
+  .hero .left-content {
+    width: 35%; /* Adjust width to balance the text on each side */
+  }
+  .hero .left-content h2 {
+    width: 70%;
+    padding-left: 1rem;
+    margin-bottom: 20px;
+  }
+  .hero .right-content {
+    margin-left: 3rem;
+    width: 50%; /* Adjust width to balance the text on each side */
+  }
+  .hero .cta-text p {
+    padding-left: 1rem;
+    width: 100%;
+  }
+  .hero .cta-space {
+    height: 10px;
+    display: block;
+  }
+  .hero .cta-btn {
+    margin-left: 1rem;
   }
 }
 @media (min-width: 1200px) {
   .hero img {
     width: 950px; /* Set width */
     height: 951px; /* Set height */
-    margin: 0 auto; /* Center the hero section */
+    margin-left: auto; /* Center the hero section */
   }
 }
 @media (max-width: 1199px) {
   .hero img {
     width: 650px; /* Set width */
     height: 651px; /* Set height */
-    margin: 0 auto; /* Center the hero section */
+    margin-left: auto; /* Center the hero section */
   }
 }
 @media (max-width: 768px) {
   .hero img {
     width: 500px; /* Set width */
     height: 501px; /* Set height */
-    margin: 0 auto; /* Center the hero section */
+    margin-left: auto; /* Center the hero section */
   }
 }
 
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
+.valueprop .card {
+  border-radius: 35px;
+  overflow: hidden;
+}
+.valueprop .card .card-img-top {
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.valueprop .card .card-title {
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+.valueprop .card .card-text {
+  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 2;
+}
+.valueprop .img-fluid {
+  border-radius: 150px;
+  width: 85%;
+  height: auto;
+}
+.valueprop h1 {
+  font-size: 2.5rem;
+  font-weight: 200;
+}
+.valueprop h5 .center-back-oval {
+  background-color: var(--accent-color);
+  padding: 15px 20px;
+  border-radius: 15px;
+  color: #333;
+  display: inline-block;
+}
+.valueprop .content h3 {
+  font-size: 1.75rem;
+  font-weight: 500;
+  color: #333;
+}
+.valueprop .content p {
+  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 2;
+}
+.valueprop .content .fst-italic {
+  color: color-mix(in srgb, var(--default-color), var(--contrast-color) 50%);
+}
+.valueprop .content .dash {
+  width: 50px;
+  height: 2px;
+  background-color: #333;
+  margin-left: auto;
+}
+.valueprop .content ul {
+  list-style: none;
+  padding: 0;
+}
+.valueprop .content ul li {
+  padding: 10px 0 0 0;
+  display: flex;
+}
+.valueprop .content ul i {
+  color: var(--accent-color);
+  margin-right: 0.5rem;
+  line-height: 1.2;
+  font-size: 1.25rem;
+}
+.valueprop .content p:last-child {
+  margin-bottom: 0;
+}
+
+/*--------------------------------------------------------------
+# About Section
+--------------------------------------------------------------*/
+.about .img-fluid {
+  width: 85%;
+  height: auto;
+}
+.about img {
+  width: 85%;
+  height: auto;
+}
+.about h1 {
+  font-size: 2.5rem;
+  font-weight: 200;
+}
+.about h5 .center-back-oval {
+  background-color: var(--accent-color);
+  padding: 15px 20px;
+  border-radius: 15px;
+  color: #333;
+  display: inline-block;
+}
 .about .content h3 {
   font-size: 1.75rem;
-  font-weight: 700;
+  font-weight: 500;
+  color: #333;
+}
+.about .content p {
+  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 2;
 }
 .about .content .fst-italic {
   color: color-mix(in srgb, var(--default-color), var(--contrast-color) 50%);
+}
+.about .content .dash {
+  width: 50px;
+  height: 2px;
+  background-color: #333;
+  margin-left: auto;
 }
 .about .content ul {
   list-style: none;
@@ -966,6 +1159,113 @@ section,
 }
 .about .content p:last-child {
   margin-bottom: 0;
+}
+
+/*--------------------------------------------------------------
+# About Section
+--------------------------------------------------------------*/
+.products .pro-desc {
+  font-weight: 300;
+  line-height: 2;
+  font-size: 14px;
+  color: var(--regular-text-color);
+}
+.products h1 {
+  font-size: 2.5rem;
+  font-weight: 200;
+}
+.products h2 {
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+
+/*--------------------------------------------------------------
+# Faq Section
+--------------------------------------------------------------*/
+.faq {
+  margin-top: 40px;
+}
+.faq h1 {
+  font-size: 2.5rem;
+  font-weight: 200;
+}
+.faq h5 .center-back-oval {
+  background-color: var(--accent-color);
+  padding: 15px 20px;
+  border-radius: 15px;
+  color: #333;
+  display: inline-block;
+}
+.faq .faq-container .faq-item {
+  background-color: var(--surface-color);
+  position: relative;
+  padding: 20px;
+  margin-bottom: 15px;
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
+  border-radius: 25px;
+  overflow: hidden;
+}
+.faq .faq-container .faq-item:last-child {
+  margin-bottom: 0;
+}
+.faq .faq-container .faq-item h3 {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  margin: 0 30px 0 0;
+  transition: 0.3s;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.faq .faq-container .faq-item h3 .num {
+  color: var(--accent-color);
+  padding-right: 5px;
+}
+.faq .faq-container .faq-item h3:hover {
+  color: var(--default-color);
+}
+.faq .faq-container .faq-item .faq-content {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: 0.3s ease-in-out;
+  visibility: hidden;
+  opacity: 0;
+}
+.faq .faq-container .faq-item .faq-content p {
+  margin-bottom: 0;
+  overflow: hidden;
+  font-weight: 400;
+}
+.faq .faq-container .faq-item .faq-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 16px;
+  line-height: 0;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.faq .faq-container .faq-item .faq-toggle:hover {
+  color: #fff;
+}
+.faq .faq-container .faq-active {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+  color: #fff;
+}
+.faq .faq-container .faq-active h3 {
+  color: #fff;
+}
+.faq .faq-container .faq-active .faq-content {
+  grid-template-rows: 1fr;
+  visibility: visible;
+  opacity: 1;
+  padding-top: 10px;
+}
+.faq .faq-container .faq-active .faq-toggle {
+  transform: rotate(90deg);
+  color: var(--accent-color);
 }
 
 /*--------------------------------------------------------------

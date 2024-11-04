@@ -35,6 +35,7 @@ html(lang='en')
         link(href='css/styles.css', rel='stylesheet')
 
     body.index-page
+        
         header#header.header.d-flex.align-items-center.fixed-top
             .container-fluid.container-xl.position-relative.d-flex.align-items-center.justify-content-between
                 a.logo.d-flex.align-items-center.me-auto.me-lg-0(href='index.html')
@@ -44,13 +45,15 @@ html(lang='en')
                         li.nav-item
                             a.active(href='#hero').nav-link Home
                         li.nav-item
-                            a(href='#aboutus').nav-link About us
+                            a(href='#valueprop').nav-link Our values
                         li.nav-item
-                            a(href='#product').nav-link Product
+                            a(href='#products').nav-link Products
                         li.nav-item
-                            a(href='#services').nav-link Services
+                            a(href='#about').nav-link About us
                         li.nav-item
-                            a(href='#contact').nav-link Contact
+                            a(href='#faq').nav-link FAQ
+                        li.nav-item
+                            a(href='#footer').nav-link Contact
                     i.mobile-nav-toggle.d-xl-none.bi.bi-list
                 .cart-icons.d-flex
                     a.d-flex.align-items-center.me-3(href='#')
@@ -58,13 +61,13 @@ html(lang='en')
                     a.d-flex.align-items-center(href='#')
                         i.bi.bi-cart.icon-circle
         main.main
-            .container-fluid.container-xl.position-relative.d-flex.justify-content-between
+            .container-fluid.container-xl.position-relative.d-flex
                 // Hero Section
                 section#hero.hero
-                    img(src='assets/legily/hero-bg.png', alt='', data-aos='fade-in')
-                    .hero-content(data-aos='fade-up', data-aos-delay='100').me-auto.me-lg-0
+                    
+                    .hero-content.me-auto.me-lg-0
                         .row.hero-text
-                            .col.left-content
+                            .col-md-5.col-12.left-content(data-aos='fade-left', data-aos-delay='100')
                                 h2 Where science meets skincare
                                 span.cta-text
                                     p Enhance your inner and outer beauty 
@@ -72,7 +75,7 @@ html(lang='en')
                                         | with Le Gily’s science -backed self-
                                         br
                                         | care. 
-                                    a.btn.btn-lg.cta-btn(href='#', role='button') View Products
+                                    a.btn.btn-lg.btn-sm.cta-btn(href='#', role='button') View Products
                                 span.cta-space
                                 span.cta-text
                                     p Experience tranquility with our Anti-
@@ -80,29 +83,234 @@ html(lang='en')
                                         | Stress Serum, Transform your response 
                                         br
                                         | to everyday stress with our serum. 
-                                    a.btn.btn-lg.cta-btn(href='#', role='button') Buy now
-                            .col.right-content
-                                div.values-read-more 
-                                    span
-                                        p.value-item Epigenetic Formulations
-                                        a.cta-learn-more(href='#', class='btn btn-link')
-                                            | Learn More
-                                            i.bi.bi-arrow-right
-                                    span
-                                        p.value-item Science-backed Products
-                                        a.cta-learn-more(href='#', class='btn btn-link')
-                                            | Learn More
-                                            i.bi.bi-arrow-right
-                                    span
-                                        p.value-item Crafted with Eco-Cert Ingredients
-                                        a.cta-learn-more(href='#', class='btn btn-link') Learn More
-                                            i.bi.bi-arrow-right
-                                    span 
-                                        p.value-item Sustainable and Certified Beauty
-                                        a.cta-learn-more(href='#', class='btn btn-link')
-                                            | Learn More
-                                            i.bi.bi-arrow-right
+                                    a.btn.btn-lg.btn-sm.cta-btn(href='#', role='button') Buy now
 
+                    img(src='assets/legily/hero-bg.jpg', alt='', data-aos='zoom-in-up')        
+                    
+                    
+
+        section#valueprop.valueprop.section
+            .container.my-5(data-aos="fade-up", data-aos-delay="100")
+                h1.text-center.rounded-pill Our values
+                .row.row-cols-1.row-cols-md-4.g-4
+                    .col
+                        .card.h-100
+                            // Carousel replacing the card image at the top
+                            .carousel.slide(data-bs-ride="carousel")
+                                .carousel-inner
+                                    .carousel-item.active
+                                        img(src="assets/legily/ef-01-target-root-causes.png", alt="target-root-causes", class="d-block w-100", style="height: 230px; object-fit: cover;")
+                                        .carousel-caption.d-none.d-md-block
+                                    .carousel-item
+                                        img(src="assets/legily/ef-02-adapts-to-your-skin.png", alt="adapts-to-your-skin", class="d-block w-100", style="height: 230px; object-fit: cover;")
+                                        .carousel-caption.d-none.d-md-block
+                                    .carousel-item
+                                        img(src="assets/legily/ef-03-well-being.png", alt="well-being", class="d-block w-100", style="height: 230px; object-fit: cover;")
+                                        .carousel-caption.d-none.d-md-block
+                                .carousel-control-prev(href="#carouselExample" role="button", data-bs-slide="prev")
+                                    span.carousel-control-prev-icon(aria-hidden="true")
+                                    span.visually-hidden Previous
+                                .carousel-control-next(href="#carouselExample" role="button", data-bs-slide="next")
+                                    span.carousel-control-next-icon(aria-hidden="true")
+                                    span.visually-hidden Next
+                                // Card body containing title and body text
+                            .card-body
+                                h5.card-title.text-center Epigenetic Formulations
+                                p.card-text.text-center Activate your skin’s natural ability to rejuvenate and repair itself with our groundbreaking epigenetic technology. Unlike traditional skincare, Le Gily’s products work on a cellular level and treat beyond just surface concerns.
+
+                    .col
+                        .card.h-100
+                            // Carousel replacing the card image at the top
+                            .carousel.slide(data-bs-ride="carousel")
+                                .carousel-inner
+                                    .carousel-item.active
+                                        img(src="assets/legily/sb-01-team.png", alt="team", class="d-block w-100", style="height: 230px; object-fit: cover;", data-aos='zoom-in-up')
+                                        .carousel-caption.d-none.d-md-block
+                                    .carousel-item
+                                        img(src="assets/legily/sb-02-clinically.png", alt="clinically", class="d-block w-100", style="height: 230px; object-fit: cover;")
+                                        .carousel-caption.d-none.d-md-block
+                                    .carousel-item
+                                        img(src="assets/legily/sb-03-scientifically.png", alt="scientifically", class="d-block w-100", style="height: 230px; object-fit: cover;")
+                                        .carousel-caption.d-none.d-md-block
+                                .carousel-control-prev(href="#carouselExample" role="button", data-bs-slide="prev")
+                                    span.carousel-control-prev-icon(aria-hidden="true")
+                                    span.visually-hidden Previous
+                                .carousel-control-next(href="#carouselExample" role="button", data-bs-slide="next")
+                                    span.carousel-control-next-icon(aria-hidden="true")
+                                    span.visually-hidden Next
+                                // Card body containing title and body text
+                            .card-body
+                                h5.card-title.text-center Science Backed
+                                p.card-text.text-center At Le Gily, we value the fusion of science and self-care. All of our products and formulae undergo rigorous clinical testing and are backed by years of scientific research. With a team of expert formulators and cutting-edge technology at our disposal, we create products that deliver real, measurable results. 
+
+                    .col
+                        .card.h-100
+                            // Carousel replacing the card image at the top
+                            .carousel.slide(data-bs-ride="carousel")
+                                .carousel-inner
+                                    .carousel-item.active
+                                        img(src="assets/legily/ce-01-ethical.png", alt="Image 1", class="d-block w-100", style="height: 230px; object-fit: cover;")
+                                        .carousel-caption.d-none.d-md-block
+                                    .carousel-item
+                                        img(src="assets/legily/ce-02.png", alt="Image 2", class="d-block w-100", style="height: 230px; object-fit: cover;")
+                                        .carousel-caption.d-none.d-md-block
+                                    .carousel-item
+                                        img(src="assets/legily/ce-03-clean-formulations.png", alt="Image 3", class="d-block w-100", style="height: 230px; object-fit: cover;")
+                                        .carousel-caption.d-none.d-md-block
+                                .carousel-control-prev(href="#carouselExample" role="button", data-bs-slide="prev")
+                                    span.carousel-control-prev-icon(aria-hidden="true")
+                                    span.visually-hidden Previous
+                                .carousel-control-next(href="#carouselExample" role="button", data-bs-slide="next")
+                                    span.carousel-control-next-icon(aria-hidden="true")
+                                    span.visually-hidden Next
+                                // Card body containing title and body text
+                            .card-body
+                                h5.card-title.text-center Crafted with Eco-Cert Ingredients
+                                p.card-text.text-center At Le Gily, we value the fusion of science and self-care. All of our products and formulae undergo rigorous clinical testing and are backed by years of scientific research. With a team of expert formulators and cutting-edge technology at our disposal, we create products that deliver real, measurable results. 
+
+                    .col
+                        .card.h-100
+                            // Carousel replacing the card image at the top
+                            .carousel.slide(data-bs-ride="carousel")
+                                .carousel-inner
+                                    .carousel-item.active
+                                        img(src="assets/legily/sc-01-crown.png", alt="crown", class="d-block w-100", style="height: 230px; object-fit: cover;")
+                                        .carousel-caption.d-none.d-md-block
+                                    .carousel-item
+                                        img(src="assets/legily/sc-02-fda.png", alt="fda", class="d-block w-100", style="height: 230px; object-fit: cover;")
+                                        .carousel-caption.d-none.d-md-block
+                                    .carousel-item
+                                        img(src="assets/legily/sc-03-vegan.png", alt="vegan", class="d-block w-100", style="height: 230px; object-fit: cover;")
+                                        .carousel-caption.d-none.d-md-block
+                                    .carousel-item
+                                        img(src="assets/legily/sc-04-cruelty-free.png", alt="cruelty free", class="d-block w-100", style="height: 230px; object-fit: cover;")
+                                        .carousel-caption.d-none.d-md-block
+                                    .carousel-item
+                                        img(src="assets/legily/sc-05-halal.png", alt="halal", class="d-block w-100", style="height: 230px; object-fit: cover;")
+                                        .carousel-caption.d-none.d-md-block
+                                    .carousel-item
+                                        img(src="assets/legily/sc-06-gmp.png", alt="GMP", class="d-block w-100", style="height: 230px; object-fit: cover;")
+                                        .carousel-caption.d-none.d-md-block
+                                .carousel-control-prev(href="#carouselExample" role="button", data-bs-slide="prev")
+                                    span.carousel-control-prev-icon(aria-hidden="true")
+                                    span.visually-hidden Previous
+                                .carousel-control-next(href="#carouselExample" role="button", data-bs-slide="next")
+                                    span.carousel-control-next-icon(aria-hidden="true")
+                                    span.visually-hidden Next
+                                // Card body containing title and body text
+                            .card-body
+                                h5.card-title.text-center Sustainable and Certified Beauty
+                                p.card-text.text-center Le Gily - Where your well-being meets the planet’s. Our products are formulated with sustainable and ethically sourced ingredients and are packed with eco-friendly packaging. All our products are formulated with artificial color-free, paraben-free, eco-certified ingredients.
+        
+        section#products.products.section
+            .container.my-5(data-aos="fade-up", data-aos-delay="100")
+                h1.text-center.rounded-pill Products
+                .row.gx-4.gx-lg-5
+                    .col-md-6
+                        img.card-img-top.mb-5.mb-md-0(src='assets/legily/pro-1.jpg', alt='...')
+                    .col-md-6
+                        .small.mb-1 SKU: LE-GILY-001
+                        h2 Anti-Stress Serum
+                        .fs-5.mb-2
+                            span.text-decoration-line-through &pound;45.00
+                            span &pound;40.00
+                        p.pro-desc
+                            | Combat the visible effects of stress with our Anti-Stress Serum. Our pioneering serum promotes a sense of calm and balance with a fusion of essential oil ingredients, providing you with an unparalleled mood-boosting experience.
+                        .d-flex
+                            input#inputQuantity.form-control.text-center.me-3(type='num', value='1', style='max-width: 3rem')
+                            button.btn.btn-outline-dark.flex-shrink-0(type='button')
+                                i.bi-cart-fill.me-1
+                                Add to cart
+
+                                
+
+
+        section#about.about.section
+            .container(data-aos="fade-up", data-aos-delay="100")
+                h1.text-center.rounded-pill About Us
+                .row
+                    
+                    .col-lg-7.order-2.order-lg-1.content(data-aos="fade-left", data-aos-delay="100")
+                        h3(data-aos="fade-left", data-aos-delay="100") Our Brand Story
+                        hr
+                        p.text-justify
+                            | True beauty radiates from within. Le Gily was born with this simple idea. We wanted to create a skincare experience that calms the mind, nourishes the skin, and uplifts the spirit. 
+                        p.text-justify 
+                            | We understand that stress is inevitable in this fast-paced lifestyle that takes a toll on your skin health and well-being. At Le Gily, we have formulated products with advanced epigenetic science and nature’s finest ingredients beyond just the surface. We treat inner peace and outer radiance. 
+                        p.text-justify
+                            | Le Gily is on a mission to revolutionize beauty and well-being through science. With a thorough understanding of the connection between emotional well-being and skin health, our products are formulated to treat you from within. 
+                    .col-lg-5.order-1.order-lg-2(data-aos="flip-right", data-aos-delay="100")
+                        img.mx-auto.d-block(src="assets/legily/about-us-our-brand-story.jpg", alt="", data-aos='zoom-in-up')
+                .row.my-5
+                    .col-lg-5.order-2.order-lg-1(data-aos="flip-left", data-aos-delay="100")
+                        img.mx-auto.d-block(src="assets/legily/founder-note.jpg", alt="", data-aos='flip-right')
+                    .col-lg-7.order-1.order-lg-2.content(data-aos="fade-right", data-aos-delay="100")
+                        h3(data-aos="fade-right", data-aos-delay="100") Formulators Note
+                        hr
+                        p.text-justify
+                            | Le Gily’s products come together at the intersection of cutting-edge science and ethically sourced natural ingredients. Our formulations speak to you on a cellular level and nurture your skin and soul. Our team of experts spends years perfecting products that enhance your skin’s natural rhythms while calming the mind.
+                        p.text-justify
+                            | Our approach is rooted in the principle that one-size-fits-none. Our products act to your individual needs by working with your skin’s unique genetic conception. We believe true beauty emerges by balancing the inner and outer self. Every product is crafted with precision and care, offering not just results but a sense of renewal that radiates from within.
+                    
+                .row.my-5
+                    .col-lg-12.order-2.order-lg-1.content(data-aos="zoom-in-up", data-aos-delay="100")
+                        h3(data-aos="zoom-in-up", data-aos-delay="100") Sustainable and Certified Beauty
+                        hr
+                        p.text-justify
+                            | Le Gily - Where your well-being meets the planet’s. Our products are formulated with sustainable and ethically sourced ingredients and are packed with eco-friendly packaging. All our products are formulated with artificial color-free, paraben-free, eco-certified ingredients.
+                        p.text-justify
+                            | Our formulations are crafted in GMP-certified facilities, adhering to the highest global standards, including USFDA and EU regulations.
+
+                   
+            .container
+                .row.justify-content-center
+                    .col-auto
+                        img.img-fluid(src="assets/legily/01-no-animals.png", alt="Image 1", data-aos='zoom-in')
+                    .col-auto
+                        img.img-fluid(src="assets/legily/02-cruelty-free.png", alt="Image 2", data-aos='zoom-in')
+                    .col-auto
+                        img.img-fluid(src="assets/legily/03-eco-friendly.png", alt="Image 3", data-aos='zoom-in')
+                    .col-auto
+                        img.img-fluid(src="assets/legily/04-halal-certified.png", alt="Image 4", data-aos='zoom-in')
+                    .col-auto
+                        img.img-fluid(src="assets/legily/05-env-friendly-packaging.png", alt="Image 5", data-aos='zoom-in')
+        
+        section#faq.faq.section     
+            .container(data-aos="fade-up", data-aos-delay="100")
+                h1.text-center.rounded-pill Frequently Asked Questions
+                .row.justify-content-center.mt-10
+                    .col-lg-10(data-aos="fade-up", data-aos-delay="100")
+                        .faq-container
+                            .faq-item.faq-active
+                                h3 Can I use Le Gily products on sensitive skin?
+                                .faq-content
+                                    p Yes. Our products are formulated to suit every skin type. We use sustainable, gentle, and clinically tested ingredients, and our products are free of artificial colors and paraben. We recommend you do a patch test before you start using our products.
+                                i.faq-toggle.bi.bi-chevron-right
+                            // End Faq item
+                            .faq-item
+                                h3 Are your products cruelty-free?
+                                .faq-content
+                                    p Yes, all our products are cruelty-free and are not animal tested. All our products are vegan and are ethically sourced. 
+                                i.faq-toggle.bi.bi-chevron-right
+                            // End Faq item
+                            .faq-item
+                                h3 Are your products scientifically tested?
+                                .faq-content
+                                    p Yes, our products are scientifically backed and clinically tested for maximum efficacy.
+                                i.faq-toggle.bi.bi-chevron-right
+                            // End Faq item
+                            .faq-item
+                                h3 How should I incorporate Anti-Stress Serum into my skincare?
+                                .faq-content
+                                    p For optimal results, we suggest you use it every morning and night on a clean face. Apply 2-3 drops of the product across your face and neck, and gently press into your skin. 
+                                i.faq-toggle.bi.bi-chevron-right
+                            // End Faq item
+                            .faq-item
+                                h3 What payment methods do you accept?
+                                .faq-content
+                                    p We accept a wide range of payment options including COD. 
+                                i.faq-toggle.bi.bi-chevron-right
+                            // End Faq item
         footer#footer.footer.dark-background
             div.container-fluid.container-xl.position-relative.d-flex.align-items-center.justify-content-between
                 div.curved-rectangle
@@ -111,11 +319,35 @@ html(lang='en')
                             .col-4
                                 img(src='assets/legily/logo-white.png' alt='')
                             .col-2 
-                                h2 information
+                                h6 information
+                                p
+                                    br
+                                    | Our values 
+                                    br
+                                    | Privacy policy
+                                    br
+                                    | Terms & Conditions
+                                    br
+                                    | Queries
                             .col-2 
-                                h2 menu
-                            .col-4
-                                h2 request a call
+                                h6 Quick Links 
+                                p
+                                    | Knowledge 
+                                    br
+                                    | FAQ 
+                                    br
+                                    | Shipping and payment 
+                                    br
+                                    | Return & refund policy
+                                    br
+                                    | Track order
+                                    
+                            .col-4.text-end
+                                h6 request a call
+                                p  
+                                    | contact@legily.com
+                                    br
+                                    | +44-444-4444
                         .row
                             .col-12     
                                 p 
@@ -134,10 +366,12 @@ html(lang='en')
                             .copy 
                                 .row    
                                     .col-6
-                                        p &copy; Copyright 2024 Li Gily
+                                        p &copy; Copyright 2024 Le Gily
                                     .col-6  
                                         p.privacy privacy
 
+        a#scroll-top.scroll-top.d-flex.align-items-center.justify-content-center.active(href="#")
+            i.bi.bi-arrow-up-short
         // Bootstrap core JS
         script(src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js')
 

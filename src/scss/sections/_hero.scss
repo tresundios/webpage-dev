@@ -9,9 +9,7 @@
   min-height: 100vh;
   position: relative;
   display: flex;
-  align-items: center;
-  justify-content: center;
-
+  
 
 
   &:before {
@@ -82,11 +80,12 @@
       }
     }
   }
-
-  img {
+  /* change img to video */
+  video {
     inset: 0;
     display: block;
     z-index: 1;
+    margin-left: auto;
   }
 
   .hero-content {
@@ -105,11 +104,17 @@
     margin-top: 200px; /* Offset the text 30% below the top of hero-content */
     display: flex;
    
-   
+    .left-content, .right-content {
+      padding: 1rem;
+  
+      @media (max-width: 576px) {
+        padding: 0.5rem; // Reduce padding on extra small screens
+      }
+    }
   }
 
   .left-content{
-    width: 45%; /* Adjust width to balance the text on each side */
+    width: 65%; /* Adjust width to balance the text on each side */
     h2 {
       width: 70%;
       margin-bottom: 40px;
@@ -117,7 +122,7 @@
   }
 
   .right-content {
-    width: 45%; /* Adjust width to balance the text on each side */
+    width: 55%; /* Adjust width to balance the text on each side */
   }
   
   .cta-btn {
@@ -132,6 +137,11 @@
     transition: 0.5s;
     color: var(--surface-color);
     background-color: var(--accent-color);
+
+    @media (max-width: 576px) { // Adjust max-width as needed for your breakpoint
+      padding: 0.25rem 0.5rem; // Smaller padding for mobile
+      font-size: 0.875rem; // Adjust font size for smaller screens
+    }
   }
   
   .cta-btn:hover {
@@ -143,10 +153,15 @@
   .cta-text {
     font-family: var(--default-font);
     font-weight: 400;
-    font-size: 14px;
+    font-size: 15px;
     color: var(--regular-text-color);
     padding-top: 40px;
     padding-bottom: 40px;
+
+    p {
+      width: 100%;
+      font-size: 15px;
+    }
   }
 
   .cta-space {
@@ -157,11 +172,11 @@
   .values-read-more {
     
     padding-left: 50%;
-    padding-top: 15%;
+    padding-top: 7%;
     span {
       display: block; /* Each item will be on a new line */
       margin-bottom: 50px; /* Add space between each item */
-  }
+    }
   }
 
   .value-item {
@@ -198,12 +213,71 @@
 
   @media (max-width: 768px) {
     h2 {
-      font-size: 32px;
+      font-size: 16px;
     }
 
     p {
-      font-size: 18px;
+      font-size: 12px;
     }
+
+    .values-read-more {
+    
+      padding-left: 50%;
+      
+      span {
+        display: block; /* Each item will be on a new line */
+        margin-bottom: 25px; /* Add space between each item */
+      }
+    }
+
+    .value-item {
+      font-family: var(--default-font);
+      color: var(--nav-color);
+      font-weight: 200; /* Extra Light */
+      font-size: 12px; /* Font size */
+    }
+  
+    .cta-learn-more {
+      font-size: 10px;
+      margin-left: -12px;
+    }
+
+    .hero-text {
+      margin-top: 10rem; /* Offset the text 30% below the top of hero-content */
+      display: flex;
+     
+     
+    }
+
+    .left-content{
+      width: 35%; /* Adjust width to balance the text on each side */
+      h2 {
+        width: 70%;
+        padding-left: 1rem;
+        margin-bottom: 20px;
+      }
+    }
+    .right-content {
+      margin-left: 3rem;
+      width: 50%; /* Adjust width to balance the text on each side */
+    }
+    
+  .cta-text {
+    p {
+      padding-left: 1rem;
+      width: 100%;
+    }
+  }
+
+  .cta-space {
+    height: 10px;
+    display: block;
+  }
+
+  .cta-btn {
+    margin-left: 1rem;
+    
+  }
   }
 
   
@@ -211,7 +285,7 @@
     img {
       width: 950px; /* Set width */
       height: 951px; /* Set height */
-      margin: 0 auto; /* Center the hero section */
+      margin-left: auto; /* Center the hero section */
     }
   }
 
@@ -219,7 +293,7 @@
     img {
       width: 650px; /* Set width */
       height: 651px; /* Set height */
-      margin: 0 auto; /* Center the hero section */
+      margin-left: auto; /* Center the hero section */
     }
   }
 
@@ -227,7 +301,7 @@
     img {
       width: 500px; /* Set width */
       height: 501px; /* Set height */
-      margin: 0 auto; /* Center the hero section */
+      margin-left: auto; /* Center the hero section */
     }
   }
 
