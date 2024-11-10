@@ -1,0 +1,63 @@
+doctype html
+html(lang='en')
+
+    head
+
+        meta(charset='utf-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+        meta(name='description', content='')
+        meta(name='author', content='')
+
+        title Le Gily - Home
+
+        // Favicon
+        link(rel='icon', type='image/x-icon', href='assets/logo.ico')
+
+        include includes/css.pug
+        include includes/navbar.pug
+
+    body.index-page
+        
+        // Call the navbar mixin with currentPage parameter
+        +navMixin('faq')
+        
+        section#faq.faq.section     
+            .container(data-aos="fade-up", data-aos-delay="100")
+                h1.text-center Frequently Asked Questions
+                .row.justify-content-center.mt-10
+                    .col-lg-10(data-aos="fade-up", data-aos-delay="100")
+                        .faq-container
+                            .faq-item.faq-active
+                                h3 Can I use Le Gily products on sensitive skin?
+                                .faq-content
+                                    p Yes. Our products are formulated to suit every skin type. We use sustainable, gentle, and clinically tested ingredients, and our products are free of artificial colors and paraben. We recommend you do a patch test before you start using our products.
+                                i.faq-toggle.bi.bi-chevron-right
+                            // End Faq item
+                            .faq-item
+                                h3 Are your products cruelty-free?
+                                .faq-content
+                                    p Yes, all our products are cruelty-free and are not animal tested. All our products are vegan and are ethically sourced. 
+                                i.faq-toggle.bi.bi-chevron-right
+                            // End Faq item
+                            .faq-item
+                                h3 Are your products scientifically tested?
+                                .faq-content
+                                    p Yes, our products are scientifically backed and clinically tested for maximum efficacy.
+                                i.faq-toggle.bi.bi-chevron-right
+                            // End Faq item
+                            .faq-item
+                                h3 How should I incorporate Anti-Stress Serum into my skincare?
+                                .faq-content
+                                    p For optimal results, we suggest you use it every morning and night on a clean face. Apply 2-3 drops of the product across your face and neck, and gently press into your skin. 
+                                i.faq-toggle.bi.bi-chevron-right
+                            // End Faq item
+                            .faq-item
+                                h3 What payment methods do you accept?
+                                .faq-content
+                                    p We accept a wide range of payment options including COD. 
+                                i.faq-toggle.bi.bi-chevron-right
+                            // End Faq item
+
+        include includes/footer.pug
+        
+        include includes/scripts.pug

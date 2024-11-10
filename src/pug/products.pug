@@ -1,0 +1,181 @@
+doctype html
+html(lang='en')
+
+    head
+
+        meta(charset='utf-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+        meta(name='description', content='')
+        meta(name='author', content='')
+
+        title Le Gily - Home
+
+        // Favicon
+        link(rel='icon', type='image/x-icon', href='assets/logo.ico')
+
+        include includes/css.pug
+        include includes/navbar.pug
+
+    body.index-page
+        
+        // Call the navbar mixin with currentPage parameter
+        +navMixin('products')
+  
+        section#products.products.section.bsb-accordion-6
+            .container.my-5(data-aos="fade-up", data-aos-delay="100")
+                h1.text-center.rounded-pill Products
+                .row
+                    // Left Column: Thumbnails and Main Image
+                    .col-md-6
+                        .carousel-container
+
+                            // Thumbnails
+                            .carousel-thumbnails
+                                button(type="button" data-bs-target="#carouselWithThumbnails" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1")
+                                    img(src="https://placehold.co/60x60/png" alt="Thumbnail 1" class="thumbnail-img")
+                                button(type="button" data-bs-target="#carouselWithThumbnails" data-bs-slide-to="1" aria-label="Slide 2")
+                                    img(src="https://placehold.co/60x60/png" alt="Thumbnail 2" class="thumbnail-img")
+                                button(type="button" data-bs-target="#carouselWithThumbnails" data-bs-slide-to="2" aria-label="Slide 3")
+                                    img(src="https://placehold.co/60x60/png" alt="Thumbnail 3" class="thumbnail-img")
+                                button(type="button" data-bs-target="#carouselWithThumbnails" data-bs-slide-to="3" aria-label="Slide 4")
+                                    img(src="https://placehold.co/60x60/png" alt="Thumbnail 4" class="thumbnail-img")
+                                button(type="button" data-bs-target="#carouselWithThumbnails" data-bs-slide-to="4" aria-label="Slide 5")
+                                    img(src="https://placehold.co/60x60/png" alt="Thumbnail 5" class="thumbnail-img")
+                                button(type="button" data-bs-target="#carouselWithThumbnails" data-bs-slide-to="5" aria-label="Slide 6")
+                                    img(src="https://placehold.co/60x60/png" alt="Thumbnail 6" class="thumbnail-img")
+                                button(type="button" data-bs-target="#carouselWithThumbnails" data-bs-slide-to="6" aria-label="Slide 7")
+                                    img(src="https://placehold.co/60x60/png" alt="Thumbnail 7" class="thumbnail-img")
+                                button(type="button" data-bs-target="#carouselWithThumbnails" data-bs-slide-to="7" aria-label="Slide 8")
+                                    img(src="https://placehold.co/60x60/png" alt="Thumbnail 8" class="thumbnail-img")
+
+                            // Main Carousel
+                            #carouselWithThumbnails.carousel.slide(data-bs-ride="carousel")
+                                .carousel-inner.carousel-inner-top
+                                    .carousel-item.active
+                                        img(src="https://placehold.co/600x600/png" alt="Image 1" class="d-block w-100")
+                                    .carousel-item
+                                        img(src="https://placehold.co/600x600/png" alt="Image 2" class="d-block w-100")
+                                    .carousel-item
+                                        img(src="https://placehold.co/600x600/png" alt="Image 3" class="d-block w-100")
+                                    .carousel-item
+                                        img(src="https://placehold.co/600x600/png" alt="Image 4" class="d-block w-100")
+                                    .carousel-item
+                                        img(src="https://placehold.co/600x600/png" alt="Image 5" class="d-block w-100")
+                                    .carousel-item
+                                        img(src="https://placehold.co/600x600/png" alt="Image 6" class="d-block w-100")
+                                    .carousel-item
+                                        img(src="https://placehold.co/600x600/png" alt="Image 7" class="d-block w-100")
+                                    .carousel-item
+                                        img(src="https://placehold.co/600x600/png" alt="Image 8" class="d-block w-100")
+                    // Right Column: Product Details
+                    .col-md-6
+                        // Product Title and Rating
+                        h1.product-title NOVA 15% Vitamin C + Turmeric Brightening Serum
+                        .d-flex.align-items-center.mb-3
+                            span.star-rating &starf;&starf;&starf;&starf;&star;
+                            span.ms-2 (403 Reviews)
+                        // Price and Installments Info
+                        p.price $65.00
+                        p
+                            | Pay in 4 interest-free installments of 
+                            strong $16.25
+                            |  with 
+                            a(href='#') Shop Pay
+                            | . 
+                            a(href='#') Learn more
+                        // Size Selection
+                        label.form-label(for='size-select') Size:
+                        select#size-select.form-select.mb-3(style='width: 150px;')
+                            option 1 oz | 30 mL
+                            option 2 oz | 60 mL
+                        // Purchase Options
+                        .mb-3
+                            .form-check.custom-radio
+                                input#subscribe.form-check-input(type='radio', name='purchase-option', checked='')
+                                label.form-check-label(for='subscribe') $55.25 Subscribe &amp; Save 15%
+                            .form-check.custom-radio
+                                input#one-time.form-check-input(type='radio', name='purchase-option')
+                                label.form-check-label(for='one-time') $65.00 One-time purchase
+                        a.text-decoration-none.mb-3.d-inline-block(href='#') Subscription details
+                        // Quantity and Add to Cart Button
+                        .d-flex.align-items-center.mb-3
+                            button.btn.btn-outline-secondary.px-3 &minus;
+                            input.form-control.text-center.mx-2(type='number', value='1', style='width: 60px;')
+                            button.btn.btn-outline-secondary.px-3 +
+                        button.btn.add-to-cart-btn ADD TO CART
+                        // Additional Information: Shipping and Return
+                        .mt-3
+                            .icon-text
+                                i.bi.bi-truck
+                                |  Free US Shipping on Orders $50+
+                            .icon-text.mt-2
+                                i.bi.bi-arrow-repeat    
+                                |  Free 30-day returns
+                        // Shipping & Returns Information
+                        .d-flex.mb-4
+                            i(class="bi bi-truck me-2") Free US Shipping on Orders $50+
+                            i(class="bi bi-arrow-repeat ms-4 me-2") Free 30-day returns
+
+                        // Product Description
+                        p A potent brightening serum that combines the clinical strength of 15% THD vitamin C with super root turmeric to visibly improve dark spots and even skin tone while being gentle on skin.
+
+                        // Accordion for Product Details
+                        .accordion(id="productDetailsAccordion")
+                            .accordion-item
+                            h2.accordion-header
+                                button.accordion-button.collapsed(type="button", data-bs-toggle="collapse", data-bs-target="#collapseDetails") PRODUCT DETAILS
+                            #collapseDetails.accordion-collapse.collapse
+                                .accordion-body
+                                p Details about the product, benefits, and other information.
+
+                            .accordion-item
+                            h2.accordion-header
+                                button.accordion-button.collapsed(type="button", data-bs-toggle="collapse", data-bs-target="#collapseUsage") HOW TO USE
+                            #collapseUsage.accordion-collapse.collapse
+                                .accordion-body
+                                p Instructions for using the product.
+
+                            .accordion-item
+                            h2.accordion-header
+                                button.accordion-button.collapsed(type="button", data-bs-toggle="collapse", data-bs-target="#collapseIngredients") INGREDIENTS
+                            #collapseIngredients.accordion-collapse.collapse
+                                .accordion-body
+                                p List of ingredients in the product.
+
+                            .accordion-item
+                            h2.accordion-header
+                                button.accordion-button.collapsed(type="button", data-bs-toggle="collapse", data-bs-target="#collapseRecycling") RECYCLING
+                            #collapseRecycling.accordion-collapse.collapse
+                                .accordion-body
+                                p Information about product packaging and recycling instructions.
+
+                            .accordion-item
+                            h2.accordion-header
+                                button.accordion-button.collapsed(type="button", data-bs-toggle="collapse", data-bs-target="#collapseResults") CLINICAL RESULTS
+                            #collapseResults.accordion-collapse.collapse
+                                .accordion-body
+                                p Results from clinical trials or customer testimonials.
+
+                // FAQ Section
+                h2.text-center.mt-5 FAQ
+                .container.my-4
+                    .row.justify-content-center
+                        .col-8
+                            .accordion(id="faqAccordion")
+                                .accordion-item
+                                h2.accordion-header
+                                    button.accordion-button.collapsed(type="button", data-bs-toggle="collapse", data-bs-target="#collapseFaq1") Can Nova be used around the eyes?
+                                #collapseFaq1.accordion-collapse.collapse
+                                    .accordion-body
+                                    p Yes, Nova is gentle enough to be used around the eye area.
+
+                                .accordion-item
+                                h2.accordion-header
+                                    button.accordion-button.collapsed(type="button", data-bs-toggle="collapse", data-bs-target="#collapseFaq2") Is Nova suitable for all skin types?
+                                #collapseFaq2.accordion-collapse.collapse
+                                    .accordion-body
+                                    p Nova is formulated to work with all skin types.
+        
+        include includes/footer.pug
+        
+        include includes/scripts.pug

@@ -42,7 +42,7 @@
 }
 
 .dark-background {
-  --background-color: #A3C8C4;
+  --background-color: #2F2F2F;
   --default-color: #ffffff;
   --heading-color: #ffffff;
   --surface-color: #252525;
@@ -440,21 +440,27 @@ h6 {
   background-color: var(--background-color);
   font-size: 14px;
 }
+.footer i {
+  padding-right: 20px;
+}
 .footer .curved-rectangle {
-  background-color: #163532; /* Adjust to desired background color */
+  background-color: #434343; /* Adjust to desired background color */
   border-radius: 20px; /* Adjust radius to control curve */
   margin-top: 50px;
   color: white; /* Text color */
   width: 100%; /* Optional: control width */
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Optional: adds a shadow for depth */
-  padding: 50px;
+  padding-top: 25px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-bottom: 25px;
 }
 .footer p {
   font-size: 14px;
 }
 .footer .last-footer {
   margin-top: 40px;
-  color: #1d2021; /* Text color */
+  color: #d3d8da; /* Text color */
   width: 100%; /* Optional: control width */
 }
 .footer .last-footer p {
@@ -464,7 +470,7 @@ h6 {
 .footer .last-footer h2 {
   font-weight: 300;
   font-size: 24px;
-  color: #1d2021; /* Text color */
+  color: #d3d8da; /* Text color */
 }
 .footer h6 {
   font-weight: 400;
@@ -1053,8 +1059,12 @@ section,
   height: auto;
 }
 .valueprop h1 {
-  font-size: 2.5rem;
-  font-weight: 200;
+  font-size: 2rem;
+  font-weight: 100;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  margin-top: 5rem;
+  margin-bottom: 3rem;
 }
 .valueprop h5 .center-back-oval {
   background-color: var(--accent-color);
@@ -1113,8 +1123,12 @@ section,
   height: auto;
 }
 .about h1 {
-  font-size: 2.5rem;
-  font-weight: 200;
+  font-size: 2rem;
+  font-weight: 100;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  margin-top: 5rem;
+  margin-bottom: 3rem;
 }
 .about h5 .center-back-oval {
   background-color: var(--accent-color);
@@ -1171,12 +1185,16 @@ section,
   color: var(--regular-text-color);
 }
 .products h1 {
-  font-size: 2.5rem;
+  font-size: 2rem;
+  text-transform: uppercase;
   font-weight: 200;
+  margin-top: 5rem;
+  margin-bottom: 3rem;
+  letter-spacing: 5px;
 }
 .products h2 {
-  font-size: 2.5rem;
-  font-weight: 400;
+  font-size: 1.5rem;
+  font-weight: 300;
 }
 .products .breadcrumb {
   font-size: 0.875rem;
@@ -1187,6 +1205,8 @@ section,
 .products .product-title {
   font-weight: bold;
   font-size: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 .products .star-rating {
   color: #ffcc00;
@@ -1270,22 +1290,17 @@ section,
   color: #666;
   margin-bottom: 2rem;
 }
-.products .text-center {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 2rem;
-}
 
 /*--------------------------------------------------------------
 # Faq Section
 --------------------------------------------------------------*/
-.faq {
-  margin-top: 40px;
-}
 .faq h1 {
-  font-size: 2.5rem;
-  font-weight: 200;
+  font-size: 2rem;
+  font-weight: 100;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  margin-top: 5rem;
+  margin-bottom: 3rem;
 }
 .faq h5 .center-back-oval {
   background-color: var(--accent-color);

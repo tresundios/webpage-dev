@@ -4,6 +4,8 @@
 --------------------------------------------------------------*/
 .valueprop {
 
+  
+
   .card {
     border-radius: 35px; // Rounded corners for the card
     overflow: hidden;    // Ensures rounded corners for image
@@ -31,8 +33,12 @@
     height: auto;
   }
   h1 {
-    font-size: 2.5rem;
-    font-weight: 200;
+    font-size: 2rem;
+    font-weight: 100;
+    text-transform:uppercase;
+    letter-spacing: 5px;
+    margin-top: 5rem;
+    margin-bottom: 3rem;
   }
   h5 {
     .center-back-oval {
