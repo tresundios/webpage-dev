@@ -1,0 +1,106 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Faq Section
+--------------------------------------------------------------*/
+.faq {
+  margin-top: 40px;
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 200;
+  }
+  h5 {
+    .center-back-oval {
+      background-color:  var(--accent-color); // Grey background color
+      padding: 15px 20px;        // Padding for spacing inside the rectangle
+      border-radius: 15px;        // Rounded corners to create the curved rectangle
+      color: #333;                // Text color
+      display: inline-block;
+    }
+  }
+  .faq-container {
+    .faq-item {
+      background-color: var(--surface-color);
+      position: relative;
+      padding: 20px;
+      margin-bottom: 15px;
+      border: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
+      border-radius: 25px;
+      overflow: hidden;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      h3 {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 24px;
+        margin: 0 30px 0 0;
+        transition: 0.3s;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+
+        .num {
+          color: var(--accent-color);
+          padding-right: 5px;
+        }
+
+        &:hover {
+          color: var(--default-color);
+        }
+      }
+
+      .faq-content {
+
+        display: grid;
+        grid-template-rows: 0fr;
+        transition: 0.3s ease-in-out;
+        visibility: hidden;
+        opacity: 0;
+
+        p {
+          margin-bottom: 0;
+          overflow: hidden;
+          font-weight: 400;
+        }
+      }
+
+      .faq-toggle {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 16px;
+        line-height: 0;
+        transition: 0.3s;
+        cursor: pointer;
+
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
+
+    .faq-active {
+      background-color: var(--accent-color);
+      border-color: var(--accent-color);
+      color: #fff;
+
+      h3 {
+        color: #fff;
+      }
+
+      .faq-content {
+        grid-template-rows: 1fr;
+        visibility: visible;
+        opacity: 1;
+        padding-top: 10px;
+      }
+
+      .faq-toggle {
+        transform: rotate(90deg);
+        color: var(--accent-color);
+      }
+    }
+  }
+}
