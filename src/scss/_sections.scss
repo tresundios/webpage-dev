@@ -4,7 +4,6 @@
 section,
 .section {
   color: var(--default-color);
-  background-color: var(--background-color);
   padding: 40px 0;
   margin-bottom: -80px;
   scroll-margin-top: 80px;
@@ -60,6 +59,7 @@ section,
 @import './sections/_valueprop.scss';
 @import './sections/_about.scss';
 @import './sections/_products.scss';
+@import './sections/_review.scss';
 @import './sections/_faq.scss';
 @import './sections/_clients.scss';
 @import './sections/_features.scss';

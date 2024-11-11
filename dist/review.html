@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Le Gily - Home</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/logo.ico" />
+        <!-- Bootstrap Main-->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" type="text/css" />
+        <!-- Font awesome icons-->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" type="text/css" />
+        <!-- Bootstrap accordian plus-->
+        <link href="https://unpkg.com/bs-brain@2.0.4/tutorials/accordions/accordion-6/assets/css/accordion-6.css" rel="stylesheet" type="text/css" />
+        <!-- aos animation-->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" type="text/css" />
+        <!-- swipe scrolling-->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css" rel="stylesheet" type="text/css" />
+        <!-- glightbox-->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.3.0/css/glightbox.min.css" rel="stylesheet" type="text/css" />
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&amp;display=swap" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body class="index-page">
+        <!-- Call the navbar mixin with currentPage parameter-->
+        <header class="header d-flex align-items-center fixed-top" id="header">
+            <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+                <a class="logo d-flex align-items-center me-auto me-lg-0" href="index.html"><img src="assets/legily/logo.png" alt="" /></a>
+                <nav class="navmenu" id="navmenu">
+                    <ul>
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="products.html">Shop for Products</a></li>
+                        <li class="nav-item"><a class="nav-link" href="aboutus.html">About us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="aboutus.html">Affiliate</a></li>
+                    </ul>
+                    <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+                </nav>
+                <div class="cart-icons d-flex">
+                    <a class="d-flex align-items-center me-3" href="#"><i class="bi bi-person icon-circle"></i></a>
+                    <a class="d-flex align-items-center" href="#"><i class="bi bi-cart icon-circle"></i></a>
+                </div>
+            </div>
+        </header>
+        <section class="review section" id="review">
+            <div class="container mt-5">
+                <h1 class="text-center">Review</h1>
+                <div class="d-flex align-items-center pb-3">
+                    <img class="rounded me-3" src="assets/legily/product-1.png" alt="Product Image" style="width: 60px; height: 60px; object-fit: cover" />
+                    <div class="d-flex flex-column">
+                        <h5 class="mb-1">Anti-Stress Serum</h5>
+                        <div class="rating">
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                        </div>
+                    </div>
+                </div>
+                <form>
+                    <div class="mb-3"><input class="form-control" id="reviewTitle" type="text" placeholder="Review Title" /></div>
+                    <div class="mb-3"><textarea class="form-control" id="reviewDescription" rows="4" placeholder="Review Description"></textarea></div>
+                    <div class="mb-3">
+                        <label class="form-label" for="fileUpload">Add Photos or Videos</label>
+                        <input class="form-control" id="fileUpload" type="file" multiple />
+                    </div>
+                    <div class="mb-3"><input class="form-control" id="name" type="text" placeholder="Name" /></div>
+                    <div class="mb-3"><input class="form-control" id="email" type="email" placeholder="Email Address" /></div>
+                    <div class="mb-3">
+                        <label class="form-label" for="profilePicture">Profile Picture (Optional)</label>
+                        <input class="form-control" id="profilePicture" type="file" />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">My Skin Results (Choose up to 5 options)</label>
+                        <div class="d-flex flex-wrap align-items-start justify-content-start gap-2 opt-items">
+                            <div class="me-2">
+                                <input class="form-check-input visually-hidden" type="checkbox" id="brighter" />
+                                <label class="form-check-label btn btn-outline-secondary" for="brighter">Brighter</label>
+                            </div>
+                            <div class="me-2">
+                                <input class="form-check-input visually-hidden" type="checkbox" id="smoother" />
+                                <label class="form-check-label btn btn-outline-secondary" for="smoother">Smoother</label>
+                            </div>
+                            <div class="me-2">
+                                <input class="form-check-input visually-hidden" type="checkbox" id="softer" />
+                                <label class="form-check-label btn btn-outline-secondary" for="softer">Softer</label>
+                            </div>
+                            <div class="me-2">
+                                <input class="form-check-input visually-hidden" type="checkbox" id="hydrated" />
+                                <label class="form-check-label btn btn-outline-secondary" for="hydrated">Hydrated</label>
+                            </div>
+                            <div class="me-2">
+                                <input class="form-check-input visually-hidden" type="checkbox" id="reduced-redness" />
+                                <label class="form-check-label btn btn-outline-secondary" for="reduced-redness">Reduced redness</label>
+                            </div>
+                            <div class="me-2">
+                                <input class="form-check-input visually-hidden" type="checkbox" id="improved-dark-spots" />
+                                <label class="form-check-label btn btn-outline-secondary" for="improved-dark-spots">Improved dark spots</label>
+                            </div>
+                            <div class="me-2">
+                                <input class="form-check-input visually-hidden" type="checkbox" id="improved-blemishes" />
+                                <label class="form-check-label btn btn-outline-secondary" for="improved-blemishes">Improved blemishes</label>
+                            </div>
+                            <div class="me-2">
+                                <input class="form-check-input visually-hidden" type="checkbox" id="improved-lines" />
+                                <label class="form-check-label btn btn-outline-secondary" for="improved-lines">Improved fine lines + wrinkles</label>
+                            </div>
+                            <div class="me-2">
+                                <input class="form-check-input visually-hidden" type="checkbox" id="clearer" />
+                                <label class="form-check-label btn btn-outline-secondary" for="clearer">Clearer</label>
+                            </div>
+                            <div class="me-2">
+                                <input class="form-check-input visually-hidden" type="checkbox" id="glowing" />
+                                <label class="form-check-label btn btn-outline-secondary" for="glowing">Glowing</label>
+                            </div>
+                            <div class="me-2">
+                                <input class="form-check-input visually-hidden" type="checkbox" id="calmer" />
+                                <label class="form-check-label btn btn-outline-secondary" for="calmer">Calmer</label>
+                            </div>
+                            <div class="me-2">
+                                <input class="form-check-input visually-hidden" type="checkbox" id="even-tone" />
+                                <label class="form-check-label btn btn-outline-secondary" for="even-tone">Even skin tone</label>
+                            </div>
+                            <div class="me-2">
+                                <input class="form-check-input visually-hidden" type="checkbox" id="firmer" />
+                                <label class="form-check-label btn btn-outline-secondary" for="firmer">Firmer</label>
+                            </div>
+                            <div class="me-2">
+                                <input class="form-check-input visually-hidden" type="checkbox" id="dark-circles" />
+                                <label class="form-check-label btn btn-outline-secondary" for="dark-circles">Improved dark circles</label>
+                            </div>
+                            <div class="me-2">
+                                <input class="form-check-input visually-hidden" type="checkbox" id="reduced-puffiness" />
+                                <label class="form-check-label btn btn-outline-secondary" for="reduced-puffiness">Reduced puffiness</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Age</label>
+                        <div class="d-flex flex-wrap align-items-start justify-content-start gap-2 opt-items">
+                            <div class="me-2">
+                                <input class="form-check-input visually-hidden" type="checkbox" id="18-24" />
+                                <label class="form-check-label btn btn-outline-secondary" for="18-24">18-24</label>
+                            </div>
+                            <div class="me-2">
+                                <input class="form-check-input visually-hidden" type="checkbox" id="25-34" />
+                                <label class="form-check-label btn btn-outline-secondary" for="25-34">25-34</label>
+                            </div>
+                            <div class="me-2">
+                                <input class="form-check-input visually-hidden" type="checkbox" id="35-44" />
+                                <label class="form-check-label btn btn-outline-secondary" for="35-44">35-44</label>
+                            </div>
+                            <div class="me-2">
+                                <input class="form-check-input visually-hidden" type="checkbox" id="45-54" />
+                                <label class="form-check-label btn btn-outline-secondary" for="45-54">45-54</label>
+                            </div>
+                            <div class="me-2">
+                                <input class="form-check-input visually-hidden" type="checkbox" id="55" />
+                                <label class="form-check-label btn btn-outline-secondary" for="55+">55+</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Skin Type</label>
+                        <div class="d-flex flex-wrap align-items-start justify-content-start gap-2 opt-items">
+                            <div class="me-2">
+                                <input class="form-check-input visually-hidden" type="checkbox" id="dry" />
+                                <label class="form-check-label btn btn-outline-secondary" for="dry">Dry</label>
+                            </div>
+                            <div class="me-2">
+                                <input class="form-check-input visually-hidden" type="checkbox" id="normal" />
+                                <label class="form-check-label btn btn-outline-secondary" for="normal">Normal</label>
+                            </div>
+                            <div class="me-2">
+                                <input class="form-check-input visually-hidden" type="checkbox" id="oily" />
+                                <label class="form-check-label btn btn-outline-secondary" for="oily">Oily</label>
+                            </div>
+                            <div class="me-2">
+                                <input class="form-check-input visually-hidden" type="checkbox" id="combination" />
+                                <label class="form-check-label btn btn-outline-secondary" for="combination">Combination</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Skin Concerns (Choose up to 5 options)</label>
+                        <div class="d-flex flex-wrap align-items-start justify-content-start gap-2 opt-items">
+                            <div class="me-2">
+                                <input class="form-check-input visually-hidden" type="checkbox" id="acne" />
+                                <label class="form-check-label btn btn-outline-secondary" for="acne">Acne</label>
+                            </div>
+                            <div class="me-2">
+                                <input class="form-check-input visually-hidden" type="checkbox" id="antiaging" />
+                                <label class="form-check-label btn btn-outline-secondary" for="antiaging">Anti-Aging</label>
+                            </div>
+                            <div class="me-2">
+                                <input class="form-check-input visually-hidden" type="checkbox" id="darkspots" />
+                                <label class="form-check-label btn btn-outline-secondary" for="darkspots">Dark Spots</label>
+                            </div>
+                            <div class="me-2">
+                                <input class="form-check-input visually-hidden" type="checkbox" id="dryness" />
+                                <label class="form-check-label btn btn-outline-secondary" for="dryness">Dryness</label>
+                            </div>
+                            <div class="me-2">
+                                <input class="form-check-input visually-hidden" type="checkbox" id="dullness" />
+                                <label class="form-check-label btn btn-outline-secondary" for="dullness">Dullness</label>
+                            </div>
+                            <div class="me-2">
+                                <input class="form-check-input visually-hidden" type="checkbox" id="oilness" />
+                                <label class="form-check-label btn btn-outline-secondary" for="oilness">Oiliness</label>
+                            </div>
+                            <div class="me-2">
+                                <input class="form-check-input visually-hidden" type="checkbox" id="pores" />
+                                <label class="form-check-label btn btn-outline-secondary" for="pores">Pores</label>
+                            </div>
+                            <div class="me-2">
+                                <input class="form-check-input visually-hidden" type="checkbox" id="55" />
+                                <label class="form-check-label btn btn-outline-secondary" for="sensitivity">Sensitivity</label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="container text-center">
+                <p>
+                    By continuing you agree to our
+                    <a href="#">Terms and Conditions</a>
+                    and
+                    <a href="#">Privacy Policy</a>
+                </p>
+                <button class="btn btn-submit" type="submit">Agree & Submit</button>
+            </div>
+        </section>
+        <footer class="footer dark-background" id="footer">
+            <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+                <div class="curved-rectangle">
+                    <div class="rectangle-inside">
+                        <div class="row">
+                            <div class="col-4"><img src="assets/legily/logo-white.png" alt="" /></div>
+                            <div class="col-2">
+                                <h6>information</h6>
+                                <p>
+                                    <a href="ourvalues.html">Our values</a>
+                                    <br />
+                                    <a href="#footer">Contact us</a>
+                                    <br />
+                                    Privacy policy
+                                    <br />
+                                    Terms & Conditions
+                                    <br />
+                                    Queries
+                                </p>
+                            </div>
+                            <div class="col-2">
+                                <h6>Quick Links</h6>
+                                <p>
+                                    Knowledge
+                                    <br />
+                                    <a href="faq.html">FAQ</a>
+                                    <br />
+                                    Shipping and payment
+                                    <br />
+                                    Return & refund policy
+                                    <br />
+                                    Track order
+                                </p>
+                            </div>
+                            <div class="col-4 text-end">
+                                <h6>contact</h6>
+                                <p>enquiries@legily.com</p>
+                            </div>
+                        </div>
+                        <div class="row pt-5">
+                            <div class="col-12">
+                                <i class="bi bi-facebook fs-3"></i>
+                                <i class="bi bi-twitter-x fs-3"></i>
+                                <i class="bi bi-telegram fs-3"></i>
+                                <i class="bi bi-instagram fs-3"></i>
+                                <i class="bi bi-whatsapp fs-3"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+                <div class="last-footer">
+                    <div class="row">
+                        <div class="col-6"><h2>If you didn’t find the products you are interested in or have questions?</h2></div>
+                        <div class="col-6">
+                            <p>Just send us your contact email and we will contact you.</p>
+                            <p>enquiries@legily.com</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <hr />
+                            <div class="copy">
+                                <div class="row">
+                                    <div class="col-6"><p>&copy; Copyright 2024 Le Gily</p></div>
+                                    <div class="col-6"><p class="privacy">privacy</p></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <a class="scroll-top d-flex align-items-center justify-content-center active" id="scroll-top" href="#"><i class="bi bi-arrow-up-short"></i></a>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"></script>
+        <!--AOS Animation-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+        <!--Swiper-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
+        <!--GLightBox-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.3.0/js/glightbox.min.js"></script>
+        <!--Images Loaded-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/5.0.0/imagesloaded.pkgd.min.js"></script>
+        <!--ISO Tope -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@srexi/purecounterjs@1.5.0/dist/purecounter_vanilla.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>

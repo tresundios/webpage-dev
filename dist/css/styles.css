@@ -28,7 +28,7 @@
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
   --nav-color: #434343; /* The default color of the main navmenu links */
-  --nav-hover-color: #87beb9; /* Applied to main navmenu links when they are hovered over or active */
+  --nav-hover-color: #4d5958; /* Applied to main navmenu links when they are hovered over or active */
   --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
   --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
   --nav-dropdown-color: #212529; /* Used for navigation links of the dropdown items in the navigation menu. */
@@ -59,7 +59,7 @@
 --------------------------------------------------------------*/
 body {
   color: var(--default-color);
-  background-color: var(--background-color);
+  background: linear-gradient(180deg, #bbc3c2 0%, #FFFFFF 100%);
   font-family: var(--default-font);
 }
 
@@ -456,7 +456,7 @@ h6 {
   padding-bottom: 25px;
 }
 .footer p {
-  font-size: 14px;
+  font-size: 12px;
 }
 .footer .last-footer {
   margin-top: 40px;
@@ -729,7 +729,6 @@ h6 {
 section,
 .section {
   color: var(--default-color);
-  background-color: var(--background-color);
   padding: 40px 0;
   margin-bottom: -80px;
   scroll-margin-top: 80px;
@@ -786,6 +785,20 @@ section,
   display: flex;
   /* change img to video */
 }
+@keyframes zoomInOut {
+  0% {
+    transform: scale(0.95);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.95);
+  }
+}
+.hero .zoom-animation {
+  animation: zoomInOut 3s ease-in-out infinite;
+}
 .hero:before {
   content: "";
   position: absolute;
@@ -799,11 +812,14 @@ section,
 .hero h2 {
   margin: 0;
   font-size: 56px;
-  font-weight: 500;
+  font-weight: 300;
   font-family: var(--nav-font);
 }
 .hero h2 span {
   color: var(--accent-color);
+}
+.hero .sub-bold {
+  font-weight: 700;
 }
 .hero p {
   margin: 10px 0 0 0;
@@ -862,7 +878,7 @@ section,
   z-index: 2; /* Bring text content above the image */
 }
 .hero .hero-text {
-  margin-top: 200px; /* Offset the text 30% below the top of hero-content */
+  margin-top: 150px; /* Offset the text 30% below the top of hero-content */
   display: flex;
 }
 .hero .hero-text .left-content, .hero .hero-text .right-content {
@@ -902,6 +918,24 @@ section,
     font-size: 0.875rem;
   }
 }
+.hero .cta-sub {
+  font-family: var(--default-font);
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 12px 40px;
+  border-radius: 25px;
+  transition: 0.5s;
+  color: var(--surface-color);
+  background-color: var(--accent-color);
+}
+@media (max-width: 576px) {
+  .hero .cta-sub {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+  }
+}
 .hero .cta-btn:hover {
   background: var(--accent-color);
   color: var(--background-color);
@@ -910,14 +944,14 @@ section,
 .hero .cta-text {
   font-family: var(--default-font);
   font-weight: 400;
-  font-size: 15px;
+  font-size: 10px;
   color: var(--regular-text-color);
   padding-top: 40px;
   padding-bottom: 40px;
 }
 .hero .cta-text p {
   width: 100%;
-  font-size: 15px;
+  font-size: 14px;
 }
 .hero .cta-space {
   height: 50px;
@@ -1009,6 +1043,28 @@ section,
     margin-left: 1rem;
   }
 }
+.hero .cta-sub-area {
+  padding-top: 20px;
+  padding-bottom: 0px;
+}
+.hero .input-group {
+  overflow: hidden;
+  width: 40% !important;
+  height: 60px !important;
+}
+.hero .input-group .form-control:focus {
+  box-shadow: none;
+}
+.hero .input-group > .form-control {
+  border-radius: 25rem !important;
+}
+.hero .input-group-append {
+  margin-left: 0;
+}
+.hero .input-group:focus-within {
+  border-color: #86b7fe;
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
 @media (min-width: 1200px) {
   .hero img {
     width: 950px; /* Set width */
@@ -1031,84 +1087,38 @@ section,
   }
 }
 
-/*--------------------------------------------------------------
-# About Section
---------------------------------------------------------------*/
-.valueprop .card {
-  border-radius: 35px;
-  overflow: hidden;
-}
-.valueprop .card .card-img-top {
-  height: 200px;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.valueprop .card .card-title {
-  font-size: 1.25rem;
-  font-weight: 400;
-}
-.valueprop .card .card-text {
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
-  font-weight: 300;
-  font-size: 14px;
-  line-height: 2;
-}
-.valueprop .img-fluid {
-  border-radius: 150px;
-  width: 85%;
-  height: auto;
-}
-.valueprop h1 {
+h1 {
   font-size: 2rem;
-  font-weight: 100;
   text-transform: uppercase;
-  letter-spacing: 5px;
+  font-weight: 200;
   margin-top: 5rem;
   margin-bottom: 3rem;
+  letter-spacing: 5px;
 }
-.valueprop h5 .center-back-oval {
-  background-color: var(--accent-color);
-  padding: 15px 20px;
-  border-radius: 15px;
-  color: #333;
-  display: inline-block;
+
+.value-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.valueprop .content h3 {
-  font-size: 1.75rem;
-  font-weight: 500;
-  color: #333;
+
+.value-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 }
-.valueprop .content p {
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
-  font-weight: 300;
-  font-size: 14px;
-  line-height: 2;
-}
-.valueprop .content .fst-italic {
-  color: color-mix(in srgb, var(--default-color), var(--contrast-color) 50%);
-}
-.valueprop .content .dash {
-  width: 50px;
-  height: 2px;
-  background-color: #333;
-  margin-left: auto;
-}
-.valueprop .content ul {
-  list-style: none;
-  padding: 0;
-}
-.valueprop .content ul li {
-  padding: 10px 0 0 0;
+
+.icon-wrapper {
+  width: 70px;
+  height: 70px;
+  background-color: #87beb9;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin: 0 auto 1.5rem;
 }
-.valueprop .content ul i {
-  color: var(--accent-color);
-  margin-right: 0.5rem;
-  line-height: 1.2;
-  font-size: 1.25rem;
-}
-.valueprop .content p:last-child {
-  margin-bottom: 0;
+
+.icon-wrapper i {
+  color: #fff;
+  font-size: 1.75rem;
 }
 
 /*--------------------------------------------------------------
@@ -1192,6 +1202,9 @@ section,
   margin-bottom: 3rem;
   letter-spacing: 5px;
 }
+.products h1 .product-title {
+  font-weight: 200;
+}
 .products h2 {
   font-size: 1.5rem;
   font-weight: 300;
@@ -1258,10 +1271,12 @@ section,
   margin-bottom: 12px;
   opacity: 0.6;
   transition: opacity 0.3s;
+  border-radius: 10px;
 }
 .products .carousel-thumbnails .active .thumbnail-img {
   opacity: 1;
   border: 2px solid #333;
+  border-radius: 10px;
 }
 .products .carousel-inner img {
   max-width: 100%;
@@ -1289,6 +1304,128 @@ section,
   font-size: 1rem;
   color: #666;
   margin-bottom: 2rem;
+}
+.products .carousel-item img {
+  border-radius: 25px;
+}
+
+/*--------------------------------------------------------------
+# About Section
+--------------------------------------------------------------*/
+.review {
+  font-family: var(--default-font);
+  /* Center and style the form container */
+  /* Style the form title and header */
+  /* Star Rating */
+  /* Form labels */
+  /* File upload and inputs */
+  /* Checkbox styling */
+  /* Submit Button */
+}
+.review .pro-desc {
+  font-weight: 300;
+  line-height: 2;
+  font-size: 14px;
+  color: var(--regular-text-color);
+}
+.review h1 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 200;
+  margin-bottom: 3rem;
+  letter-spacing: 5px;
+}
+.review .container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+}
+.review h1, .review h2 {
+  color: #333;
+}
+.review h2 {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+.review .rating .star {
+  font-size: 1.5rem;
+  color: #ffd700; /* gold color for the stars */
+  cursor: pointer;
+  padding: 0 2px;
+}
+.review .rating .star:hover,
+.review .rating .star:hover ~ .star {
+  color: #ffc107; /* slightly darker shade on hover */
+}
+.review .form-label {
+  font-weight: 300;
+  color: #555;
+}
+.review input[type=file] {
+  border: 1px solid #ddd;
+  padding: 8px;
+  border-radius: 4px;
+}
+.review textarea,
+.review input[type=text],
+.review input[type=email],
+.review select {
+  border-radius: 4px;
+}
+.review .form-check-input {
+  margin-right: 10px;
+}
+.review .form-check-label {
+  font-weight: 500;
+  color: #333;
+}
+.review button[type=submit] {
+  background-color: #007bff;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+.review button[type=submit]:hover {
+  background-color: #0056b3;
+}
+.review .form-check-label {
+  cursor: pointer;
+  border-radius: 0.25rem;
+  font-size: 12px;
+}
+.review .form-check-input:checked + .form-check-label.btn-outline-secondary {
+  background-color: #212529;
+  color: #fff;
+  border-color: #212529;
+}
+.review .btn-submit {
+  background-color: var(--accent-color) !important;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  width: 100%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.review .btn-submit:hover {
+  background-color: #333;
+}
+.review .visually-hidden {
+  position: absolute;
+  width: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
 }
 
 /*--------------------------------------------------------------

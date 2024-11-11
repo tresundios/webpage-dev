@@ -21,119 +21,182 @@ html(lang='en')
         // Call the navbar mixin with currentPage parameter
         +navMixin('ourvalues')
 
-        section#valueprop.valueprop.section
-            .container(data-aos="fade-up", data-aos-delay="100")
-                h1.text-center Our values
-                .row.row-cols-1.row-cols-md-4.g-4
-                    .col
-                        .card.h-100
-                            // Carousel replacing the card image at the top
-                            .carousel.slide(data-bs-ride="carousel")
-                                .carousel-inner
-                                    .carousel-item.active
-                                        img(src="assets/legily/ef-01-target-root-causes.png", alt="target-root-causes", class="d-block w-100", style="height: 230px; object-fit: cover;")
-                                        .carousel-caption.d-none.d-md-block
-                                    .carousel-item
-                                        img(src="assets/legily/ef-02-adapts-to-your-skin.png", alt="adapts-to-your-skin", class="d-block w-100", style="height: 230px; object-fit: cover;")
-                                        .carousel-caption.d-none.d-md-block
-                                    .carousel-item
-                                        img(src="assets/legily/ef-03-well-being.png", alt="well-being", class="d-block w-100", style="height: 230px; object-fit: cover;")
-                                        .carousel-caption.d-none.d-md-block
-                                .carousel-control-prev(href="#carouselExample" role="button", data-bs-slide="prev")
-                                    span.carousel-control-prev-icon(aria-hidden="true")
-                                    span.visually-hidden Previous
-                                .carousel-control-next(href="#carouselExample" role="button", data-bs-slide="next")
-                                    span.carousel-control-next-icon(aria-hidden="true")
-                                    span.visually-hidden Next
-                                // Card body containing title and body text
-                            .card-body
-                                h5.card-title.text-center Epigenetic Formulations
-                                p.card-text.text-center Activate your skin’s natural ability to rejuvenate and repair itself with our groundbreaking epigenetic technology. Unlike traditional skincare, Le Gily’s products work on a cellular level and treat beyond just surface concerns.
+        //- section#valueprop.valueprop.section
+        //-     .container(data-aos="fade-up", data-aos-delay="100")
+        //-         h1.text-center Our values
+        //-         .row.row-cols-1.row-cols-md-4.g-4
+        //-             .col
+        //-                 .card.h-100
+        //-                     // Carousel replacing the card image at the top
+        //-                     .carousel.slide(data-bs-ride="carousel")
+        //-                         .carousel-inner
+        //-                             .carousel-item.active
+        //-                                 img(src="assets/legily/ef-01-target-root-causes.png", alt="target-root-causes", class="d-block w-100", style="height: 230px; object-fit: cover;")
+        //-                                 .carousel-caption.d-none.d-md-block
+        //-                             .carousel-item
+        //-                                 img(src="assets/legily/ef-02-adapts-to-your-skin.png", alt="adapts-to-your-skin", class="d-block w-100", style="height: 230px; object-fit: cover;")
+        //-                                 .carousel-caption.d-none.d-md-block
+        //-                             .carousel-item
+        //-                                 img(src="assets/legily/ef-03-well-being.png", alt="well-being", class="d-block w-100", style="height: 230px; object-fit: cover;")
+        //-                                 .carousel-caption.d-none.d-md-block
+        //-                         .carousel-control-prev(href="#carouselExample" role="button", data-bs-slide="prev")
+        //-                             span.carousel-control-prev-icon(aria-hidden="true")
+        //-                             span.visually-hidden Previous
+        //-                         .carousel-control-next(href="#carouselExample" role="button", data-bs-slide="next")
+        //-                             span.carousel-control-next-icon(aria-hidden="true")
+        //-                             span.visually-hidden Next
+        //-                         // Card body containing title and body text
+        //-                     .card-body
+        //-                         h5.card-title.text-center Epigenetic Formulations
+        //-                         p.card-text.text-center Activate your skin’s natural ability to rejuvenate and repair itself with our groundbreaking epigenetic technology. Unlike traditional skincare, Le Gily’s products work on a cellular level and treat beyond just surface concerns.
 
-                    .col
-                        .card.h-100
-                            // Carousel replacing the card image at the top
-                            .carousel.slide(data-bs-ride="carousel")
-                                .carousel-inner
-                                    .carousel-item.active
-                                        img(src="assets/legily/sb-01-team.png", alt="team", class="d-block w-100", style="height: 230px; object-fit: cover;", data-aos='zoom-in-up')
-                                        .carousel-caption.d-none.d-md-block
-                                    .carousel-item
-                                        img(src="assets/legily/sb-02-clinically.png", alt="clinically", class="d-block w-100", style="height: 230px; object-fit: cover;")
-                                        .carousel-caption.d-none.d-md-block
-                                    .carousel-item
-                                        img(src="assets/legily/sb-03-scientifically.png", alt="scientifically", class="d-block w-100", style="height: 230px; object-fit: cover;")
-                                        .carousel-caption.d-none.d-md-block
-                                .carousel-control-prev(href="#carouselExample" role="button", data-bs-slide="prev")
-                                    span.carousel-control-prev-icon(aria-hidden="true")
-                                    span.visually-hidden Previous
-                                .carousel-control-next(href="#carouselExample" role="button", data-bs-slide="next")
-                                    span.carousel-control-next-icon(aria-hidden="true")
-                                    span.visually-hidden Next
-                                // Card body containing title and body text
-                            .card-body
-                                h5.card-title.text-center Science Backed
-                                p.card-text.text-center At Le Gily, we value the fusion of science and self-care. All of our products and formulae undergo rigorous clinical testing and are backed by years of scientific research. With a team of expert formulators and cutting-edge technology at our disposal, we create products that deliver real, measurable results. 
+        //-             .col
+        //-                 .card.h-100
+        //-                     // Carousel replacing the card image at the top
+        //-                     .carousel.slide(data-bs-ride="carousel")
+        //-                         .carousel-inner
+        //-                             .carousel-item.active
+        //-                                 img(src="assets/legily/sb-01-team.png", alt="team", class="d-block w-100", style="height: 230px; object-fit: cover;", data-aos='zoom-in-up')
+        //-                                 .carousel-caption.d-none.d-md-block
+        //-                             .carousel-item
+        //-                                 img(src="assets/legily/sb-02-clinically.png", alt="clinically", class="d-block w-100", style="height: 230px; object-fit: cover;")
+        //-                                 .carousel-caption.d-none.d-md-block
+        //-                             .carousel-item
+        //-                                 img(src="assets/legily/sb-03-scientifically.png", alt="scientifically", class="d-block w-100", style="height: 230px; object-fit: cover;")
+        //-                                 .carousel-caption.d-none.d-md-block
+        //-                         .carousel-control-prev(href="#carouselExample" role="button", data-bs-slide="prev")
+        //-                             span.carousel-control-prev-icon(aria-hidden="true")
+        //-                             span.visually-hidden Previous
+        //-                         .carousel-control-next(href="#carouselExample" role="button", data-bs-slide="next")
+        //-                             span.carousel-control-next-icon(aria-hidden="true")
+        //-                             span.visually-hidden Next
+        //-                         // Card body containing title and body text
+        //-                     .card-body
+        //-                         h5.card-title.text-center Science Backed
+        //-                         p.card-text.text-center At Le Gily, we value the fusion of science and self-care. All of our products and formulae undergo rigorous clinical testing and are backed by years of scientific research. With a team of expert formulators and cutting-edge technology at our disposal, we create products that deliver real, measurable results. 
 
-                    .col
-                        .card.h-100
-                            // Carousel replacing the card image at the top
-                            .carousel.slide(data-bs-ride="carousel")
-                                .carousel-inner
-                                    .carousel-item.active
-                                        img(src="assets/legily/ce-01-ethical.png", alt="Image 1", class="d-block w-100", style="height: 230px; object-fit: cover;")
-                                        .carousel-caption.d-none.d-md-block
-                                    .carousel-item
-                                        img(src="assets/legily/ce-02.png", alt="Image 2", class="d-block w-100", style="height: 230px; object-fit: cover;")
-                                        .carousel-caption.d-none.d-md-block
-                                    .carousel-item
-                                        img(src="assets/legily/ce-03-clean-formulations.png", alt="Image 3", class="d-block w-100", style="height: 230px; object-fit: cover;")
-                                        .carousel-caption.d-none.d-md-block
-                                .carousel-control-prev(href="#carouselExample" role="button", data-bs-slide="prev")
-                                    span.carousel-control-prev-icon(aria-hidden="true")
-                                    span.visually-hidden Previous
-                                .carousel-control-next(href="#carouselExample" role="button", data-bs-slide="next")
-                                    span.carousel-control-next-icon(aria-hidden="true")
-                                    span.visually-hidden Next
-                                // Card body containing title and body text
-                            .card-body
-                                h5.card-title.text-center Crafted with Eco-Cert Ingredients
-                                p.card-text.text-center At Le Gily, we value the fusion of science and self-care. All of our products and formulae undergo rigorous clinical testing and are backed by years of scientific research. With a team of expert formulators and cutting-edge technology at our disposal, we create products that deliver real, measurable results. 
+        //-             .col
+        //-                 .card.h-100
+        //-                     // Carousel replacing the card image at the top
+        //-                     .carousel.slide(data-bs-ride="carousel")
+        //-                         .carousel-inner
+        //-                             .carousel-item.active
+        //-                                 img(src="assets/legily/ce-01-ethical.png", alt="Image 1", class="d-block w-100", style="height: 230px; object-fit: cover;")
+        //-                                 .carousel-caption.d-none.d-md-block
+        //-                             .carousel-item
+        //-                                 img(src="assets/legily/ce-02.png", alt="Image 2", class="d-block w-100", style="height: 230px; object-fit: cover;")
+        //-                                 .carousel-caption.d-none.d-md-block
+        //-                             .carousel-item
+        //-                                 img(src="assets/legily/ce-03-clean-formulations.png", alt="Image 3", class="d-block w-100", style="height: 230px; object-fit: cover;")
+        //-                                 .carousel-caption.d-none.d-md-block
+        //-                         .carousel-control-prev(href="#carouselExample" role="button", data-bs-slide="prev")
+        //-                             span.carousel-control-prev-icon(aria-hidden="true")
+        //-                             span.visually-hidden Previous
+        //-                         .carousel-control-next(href="#carouselExample" role="button", data-bs-slide="next")
+        //-                             span.carousel-control-next-icon(aria-hidden="true")
+        //-                             span.visually-hidden Next
+        //-                         // Card body containing title and body text
+        //-                     .card-body
+        //-                         h5.card-title.text-center Crafted with Eco-Cert Ingredients
+        //-                         p.card-text.text-center At Le Gily, we value the fusion of science and self-care. All of our products and formulae undergo rigorous clinical testing and are backed by years of scientific research. With a team of expert formulators and cutting-edge technology at our disposal, we create products that deliver real, measurable results. 
 
-                    .col
-                        .card.h-100
-                            // Carousel replacing the card image at the top
-                            .carousel.slide(data-bs-ride="carousel")
-                                .carousel-inner
-                                    .carousel-item.active
-                                        img(src="assets/legily/sc-01-crown.png", alt="crown", class="d-block w-100", style="height: 230px; object-fit: cover;")
-                                        .carousel-caption.d-none.d-md-block
-                                    .carousel-item
-                                        img(src="assets/legily/sc-02-fda.png", alt="fda", class="d-block w-100", style="height: 230px; object-fit: cover;")
-                                        .carousel-caption.d-none.d-md-block
-                                    .carousel-item
-                                        img(src="assets/legily/sc-03-vegan.png", alt="vegan", class="d-block w-100", style="height: 230px; object-fit: cover;")
-                                        .carousel-caption.d-none.d-md-block
-                                    .carousel-item
-                                        img(src="assets/legily/sc-04-cruelty-free.png", alt="cruelty free", class="d-block w-100", style="height: 230px; object-fit: cover;")
-                                        .carousel-caption.d-none.d-md-block
-                                    .carousel-item
-                                        img(src="assets/legily/sc-05-halal.png", alt="halal", class="d-block w-100", style="height: 230px; object-fit: cover;")
-                                        .carousel-caption.d-none.d-md-block
-                                    .carousel-item
-                                        img(src="assets/legily/sc-06-gmp.png", alt="GMP", class="d-block w-100", style="height: 230px; object-fit: cover;")
-                                        .carousel-caption.d-none.d-md-block
-                                .carousel-control-prev(href="#carouselExample" role="button", data-bs-slide="prev")
-                                    span.carousel-control-prev-icon(aria-hidden="true")
-                                    span.visually-hidden Previous
-                                .carousel-control-next(href="#carouselExample" role="button", data-bs-slide="next")
-                                    span.carousel-control-next-icon(aria-hidden="true")
-                                    span.visually-hidden Next
-                                // Card body containing title and body text
-                            .card-body
-                                h5.card-title.text-center Sustainable and Certified Beauty
-                                p.card-text.text-center Le Gily - Where your well-being meets the planet’s. Our products are formulated with sustainable and ethically sourced ingredients and are packed with eco-friendly packaging. All our products are formulated with artificial color-free, paraben-free, eco-certified ingredients.
+        //-             .col
+        //-                 .card.h-100
+        //-                     // Carousel replacing the card image at the top
+        //-                     .carousel.slide(data-bs-ride="carousel")
+        //-                         .carousel-inner
+        //-                             .carousel-item.active
+        //-                                 img(src="assets/legily/sc-01-crown.png", alt="crown", class="d-block w-100", style="height: 230px; object-fit: cover;")
+        //-                                 .carousel-caption.d-none.d-md-block
+        //-                             .carousel-item
+        //-                                 img(src="assets/legily/sc-02-fda.png", alt="fda", class="d-block w-100", style="height: 230px; object-fit: cover;")
+        //-                                 .carousel-caption.d-none.d-md-block
+        //-                             .carousel-item
+        //-                                 img(src="assets/legily/sc-03-vegan.png", alt="vegan", class="d-block w-100", style="height: 230px; object-fit: cover;")
+        //-                                 .carousel-caption.d-none.d-md-block
+        //-                             .carousel-item
+        //-                                 img(src="assets/legily/sc-04-cruelty-free.png", alt="cruelty free", class="d-block w-100", style="height: 230px; object-fit: cover;")
+        //-                                 .carousel-caption.d-none.d-md-block
+        //-                             .carousel-item
+        //-                                 img(src="assets/legily/sc-06-gmp.png", alt="GMP", class="d-block w-100", style="height: 230px; object-fit: cover;")
+        //-                                 .carousel-caption.d-none.d-md-block
+        //-                         .carousel-control-prev(href="#carouselExample" role="button", data-bs-slide="prev")
+        //-                             span.carousel-control-prev-icon(aria-hidden="true")
+        //-                             span.visually-hidden Previous
+        //-                         .carousel-control-next(href="#carouselExample" role="button", data-bs-slide="next")
+        //-                             span.carousel-control-next-icon(aria-hidden="true")
+        //-                             span.visually-hidden Next
+        //-                         // Card body containing title and body text
+        //-                     .card-body
+        //-                         h5.card-title.text-center Sustainable and Certified Beauty
+        //-                         p.card-text.text-center Le Gily - Where your well-being meets the planet’s. Our products are formulated with sustainable and ethically sourced ingredients and are packed with eco-friendly packaging. All our products are formulated with artificial color-free, paraben-free, eco-certified ingredients.
         
+
+        section.hero-section.py-5.pt-10
+            .container.py-4
+                .row.justify-content-center.text-center.mb-5
+                    .col-lg-8
+                        h1.mb-3 Our Values
+                        p.lead.text-muted.mb-0
+                            | We believe in creating skincare products that are good for you and the planet, 
+                            | combining the best of nature and science.
+                
+                .row.g-4
+                    //- Clean Beauty Card
+                    .col-md-6.col-lg-4
+                        .card.value-card.h-100.border-0.shadow-sm.p-4
+                            .icon-wrapper
+                                i.bi.bi-heart-fill
+                            h3.h4.mb-3 Clean Beauty
+                            p.text-muted.mb-0
+                                | Products made with love and care, free from harmful ingredients
+
+                    //- Natural Ingredients Card
+                    .col-md-6.col-lg-4
+                        .card.value-card.h-100.border-0.shadow-sm.p-4
+                            .icon-wrapper
+                                i.bi.bi-flower1
+                            h3.h4.mb-3 Natural Ingredients
+                            p.text-muted.mb-0
+                                | Powered by nature's finest botanical extracts
+
+                    //- Dermatologist Tested Card
+                    .col-md-6.col-lg-4
+                        .card.value-card.h-100.border-0.shadow-sm.p-4
+                            .icon-wrapper
+                                i.bi.bi-shield-check
+                            h3.h4.mb-3 Dermatologist Tested
+                            p.text-muted.mb-0
+                                | Clinically proven formulas that respect your skin
+
+                    //- Results Driven Card
+                    .col-md-6.col-lg-4
+                        .card.value-card.h-100.border-0.shadow-sm.p-4
+                            .icon-wrapper
+                                i.bi.bi-stars
+                            h3.h4.mb-3 Results Driven
+                            p.text-muted.mb-0
+                                | Effective solutions for real skin concerns
+
+                    //- Science-Backed Card
+                    .col-md-6.col-lg-4
+                        .card.value-card.h-100.border-0.shadow-sm.p-4
+                            .icon-wrapper
+                                i.fas.fa-flask
+                            h3.h4.mb-3 Science-Backed
+                            p.text-muted.mb-0
+                                | Advanced formulations based on cutting-edge research
+
+                    //- Sustainability Card
+                    .col-md-6.col-lg-4
+                        .card.value-card.h-100.border-0.shadow-sm.p-4
+                            .icon-wrapper
+                                i.bi.bi-globe2
+                            h3.h4.mb-3 Sustainability
+                            p.text-muted.mb-0
+                                | Eco-conscious packaging and ethical practices
+
+
         include includes/footer.pug
         
         include includes/scripts.pug

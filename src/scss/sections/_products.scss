@@ -18,6 +18,10 @@
     margin-top: 5rem;
     margin-bottom: 3rem;
     letter-spacing: 5px;
+
+    .product-title {
+      font-weight: 200;
+    }
   }
 
 
@@ -90,10 +94,12 @@
     margin-bottom: 12px;
     opacity: 0.6;
     transition: opacity 0.3s;
+    border-radius: 10px;
   }
   .carousel-thumbnails .active .thumbnail-img {
     opacity: 1;
     border: 2px solid #333;
+    border-radius: 10px;
   }
   .carousel-inner img {
     max-width: 100%;
@@ -129,6 +135,12 @@
   font-size: 1rem;
   color: #666;
   margin-bottom: 2rem;
+}
+
+.carousel-item {
+  img {
+    border-radius: 25px;
+  }
 }
 
 // FAQ Section Title

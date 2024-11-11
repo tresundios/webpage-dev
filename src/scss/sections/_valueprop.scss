@@ -1,100 +1,32 @@
-// main: ../main.scss
-/*--------------------------------------------------------------
-# About Section
---------------------------------------------------------------*/
-.valueprop {
 
-  
+h1 {
+  font-size: 2rem;
+  text-transform:uppercase;
+  font-weight: 200;
+  margin-top: 5rem;
+  margin-bottom: 3rem;
+  letter-spacing: 5px;
+}
 
-  .card {
-    border-radius: 35px; // Rounded corners for the card
-    overflow: hidden;    // Ensures rounded corners for image
-  
-    .card-img-top {
-      height: 200px;
-      object-fit: cover; // Ensures image fills area without stretching
-    }
-  
-    .card-title {
-      font-size: 1.25rem;
-      font-weight: 400;
-    }
-  
-    .card-text {
-      color: color-mix(in srgb, var(--default-color), transparent 30%);
-      font-weight: 300;
-      font-size: 14px;
-      line-height: 2;
-    }
-  }
-  .img-fluid {
-    border-radius: 150px; // Change the value to make corners more or less rounded
-    width: 85%;
-    height: auto;
-  }
-  h1 {
-    font-size: 2rem;
-    font-weight: 100;
-    text-transform:uppercase;
-    letter-spacing: 5px;
-    margin-top: 5rem;
-    margin-bottom: 3rem;
-  }
-  h5 {
-    .center-back-oval {
-      background-color:  var(--accent-color); // Grey background color
-      padding: 15px 20px;        // Padding for spacing inside the rectangle
-      border-radius: 15px;        // Rounded corners to create the curved rectangle
-      color: #333;                // Text color
-      display: inline-block;
-    }
-  }
-  .content {
 
-    h3 {
-      font-size: 1.75rem;
-      font-weight: 500;
-      color: #333;
-      
-    }
-
-    p {
-      color: color-mix(in srgb, var(--default-color), transparent 30%);
-      font-weight: 300;
-      font-size: 14px;
-      line-height: 2;
-    }
-
-    .fst-italic {
-      color: color-mix(in srgb, var(--default-color), var(--contrast-color) 50%);
-    }
-
-    .dash {
-      width: 50px;
-      height: 2px;
-      background-color: #333;
-      margin-left: auto;
-    }
-
-    ul {
-      list-style: none;
-      padding: 0;
-
-      li {
-        padding: 10px 0 0 0;
-        display: flex;
-      }
-
-      i {
-        color: var(--accent-color);
-        margin-right: 0.5rem;
-        line-height: 1.2;
-        font-size: 1.25rem;
-      }
-    }
-
-    p:last-child {
-      margin-bottom: 0;
-    }
-  }
+.value-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.value-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+}
+.icon-wrapper {
+  width: 70px;
+  height: 70px;
+  background-color: #87beb9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin: 0 auto 1.5rem;
+}
+.icon-wrapper i {
+  color: #fff;
+  font-size: 1.75rem;
 }

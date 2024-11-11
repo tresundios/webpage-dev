@@ -32,92 +32,70 @@ html(lang='en')
                             // Thumbnails
                             .carousel-thumbnails
                                 button(type="button" data-bs-target="#carouselWithThumbnails" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1")
-                                    img(src="https://placehold.co/60x60/png" alt="Thumbnail 1" class="thumbnail-img")
+                                    img(src="assets/legily/product-thumb-1.png" alt="Thumbnail 1" class="thumbnail-img")
                                 button(type="button" data-bs-target="#carouselWithThumbnails" data-bs-slide-to="1" aria-label="Slide 2")
-                                    img(src="https://placehold.co/60x60/png" alt="Thumbnail 2" class="thumbnail-img")
+                                    img(src="assets/legily/product-thumb-2.png" alt="Thumbnail 2" class="thumbnail-img")
                                 button(type="button" data-bs-target="#carouselWithThumbnails" data-bs-slide-to="2" aria-label="Slide 3")
-                                    img(src="https://placehold.co/60x60/png" alt="Thumbnail 3" class="thumbnail-img")
+                                    img(src="assets/legily/product-thumb-3.png" alt="Thumbnail 3" class="thumbnail-img")
                                 button(type="button" data-bs-target="#carouselWithThumbnails" data-bs-slide-to="3" aria-label="Slide 4")
-                                    img(src="https://placehold.co/60x60/png" alt="Thumbnail 4" class="thumbnail-img")
+                                    img(src="assets/legily/product-thumb-4.png" alt="Thumbnail 4" class="thumbnail-img")
                                 button(type="button" data-bs-target="#carouselWithThumbnails" data-bs-slide-to="4" aria-label="Slide 5")
-                                    img(src="https://placehold.co/60x60/png" alt="Thumbnail 5" class="thumbnail-img")
+                                    img(src="assets/legily/product-thumb-5.png" alt="Thumbnail 5" class="thumbnail-img")
                                 button(type="button" data-bs-target="#carouselWithThumbnails" data-bs-slide-to="5" aria-label="Slide 6")
-                                    img(src="https://placehold.co/60x60/png" alt="Thumbnail 6" class="thumbnail-img")
+                                    img(src="assets/legily/product-thumb-6.png" alt="Thumbnail 6" class="thumbnail-img")
                                 button(type="button" data-bs-target="#carouselWithThumbnails" data-bs-slide-to="6" aria-label="Slide 7")
-                                    img(src="https://placehold.co/60x60/png" alt="Thumbnail 7" class="thumbnail-img")
+                                    img(src="assets/legily/product-thumb-7.png" alt="Thumbnail 7" class="thumbnail-img")
                                 button(type="button" data-bs-target="#carouselWithThumbnails" data-bs-slide-to="7" aria-label="Slide 8")
-                                    img(src="https://placehold.co/60x60/png" alt="Thumbnail 8" class="thumbnail-img")
+                                    img(src="assets/legily/product-thumb-8.png" alt="Thumbnail 8" class="thumbnail-img")
 
                             // Main Carousel
                             #carouselWithThumbnails.carousel.slide(data-bs-ride="carousel")
                                 .carousel-inner.carousel-inner-top
                                     .carousel-item.active
-                                        img(src="https://placehold.co/600x600/png" alt="Image 1" class="d-block w-100")
+                                        img(src="assets/legily/product-1.png" alt="Image 1" class="d-block w-100")
                                     .carousel-item
-                                        img(src="https://placehold.co/600x600/png" alt="Image 2" class="d-block w-100")
+                                        img(src="assets/legily/product-2.png" alt="Image 2" class="d-block w-100")
                                     .carousel-item
-                                        img(src="https://placehold.co/600x600/png" alt="Image 3" class="d-block w-100")
+                                        img(src="assets/legily/product-3.png" alt="Image 3" class="d-block w-100")
                                     .carousel-item
-                                        img(src="https://placehold.co/600x600/png" alt="Image 4" class="d-block w-100")
+                                        img(src="assets/legily/product-4.png" alt="Image 4" class="d-block w-100")
                                     .carousel-item
-                                        img(src="https://placehold.co/600x600/png" alt="Image 5" class="d-block w-100")
+                                        img(src="assets/legily/product-5.png" alt="Image 5" class="d-block w-100")
                                     .carousel-item
-                                        img(src="https://placehold.co/600x600/png" alt="Image 6" class="d-block w-100")
+                                        img(src="assets/legily/product-6.png" alt="Image 6" class="d-block w-100")
                                     .carousel-item
-                                        img(src="https://placehold.co/600x600/png" alt="Image 7" class="d-block w-100")
+                                        img(src="assets/legily/product-7.png" alt="Image 7" class="d-block w-100")
                                     .carousel-item
-                                        img(src="https://placehold.co/600x600/png" alt="Image 8" class="d-block w-100")
+                                        img(src="assets/legily/product-8.png" alt="Image 8" class="d-block w-100")
                     // Right Column: Product Details
                     .col-md-6
                         // Product Title and Rating
-                        h1.product-title NOVA 15% Vitamin C + Turmeric Brightening Serum
+                        h1.product-title Anti-Stress Serum
                         .d-flex.align-items-center.mb-3
-                            span.star-rating &starf;&starf;&starf;&starf;&star;
-                            span.ms-2 (403 Reviews)
+                            a(href="review.html")
+                                span.star-rating &starf;&starf;&starf;&starf;&star;
+                                span.ms-2 (403 Reviews)
                         // Price and Installments Info
-                        p.price $65.00
+                        p 
+                            i.bi.bi-currency-pound 65.00
                         p
-                            | Pay in 4 interest-free installments of 
-                            strong $16.25
-                            |  with 
-                            a(href='#') Shop Pay
-                            | . 
-                            a(href='#') Learn more
+                            | Pay in 4 interest-free installments 
                         // Size Selection
                         label.form-label(for='size-select') Size:
                         select#size-select.form-select.mb-3(style='width: 150px;')
                             option 1 oz | 30 mL
                             option 2 oz | 60 mL
                         // Purchase Options
-                        .mb-3
-                            .form-check.custom-radio
-                                input#subscribe.form-check-input(type='radio', name='purchase-option', checked='')
-                                label.form-check-label(for='subscribe') $55.25 Subscribe &amp; Save 15%
-                            .form-check.custom-radio
-                                input#one-time.form-check-input(type='radio', name='purchase-option')
-                                label.form-check-label(for='one-time') $65.00 One-time purchase
-                        a.text-decoration-none.mb-3.d-inline-block(href='#') Subscription details
+                        
                         // Quantity and Add to Cart Button
                         .d-flex.align-items-center.mb-3
-                            button.btn.btn-outline-secondary.px-3 &minus;
                             input.form-control.text-center.mx-2(type='number', value='1', style='width: 60px;')
-                            button.btn.btn-outline-secondary.px-3 +
                         button.btn.add-to-cart-btn ADD TO CART
-                        // Additional Information: Shipping and Return
-                        .mt-3
-                            .icon-text
-                                i.bi.bi-truck
-                                |  Free US Shipping on Orders $50+
-                            .icon-text.mt-2
-                                i.bi.bi-arrow-repeat    
-                                |  Free 30-day returns
-                        // Shipping & Returns Information
-                        .d-flex.mb-4
-                            i(class="bi bi-truck me-2") Free US Shipping on Orders $50+
-                            i(class="bi bi-arrow-repeat ms-4 me-2") Free 30-day returns
+   
+                       
 
                         // Product Description
-                        p A potent brightening serum that combines the clinical strength of 15% THD vitamin C with super root turmeric to visibly improve dark spots and even skin tone while being gentle on skin.
+                        p.pt-3 A potent brightening serum that combines the clinical strength of 15% THD vitamin C with super root turmeric to visibly improve dark spots and even skin tone while being gentle on skin.
 
                         // Accordion for Product Details
                         .accordion(id="productDetailsAccordion")

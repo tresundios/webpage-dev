@@ -6,17 +6,13 @@ mixin navMixin(currentPage)
             nav#navmenu.navmenu
                 ul
                     li.nav-item
-                        a.nav-link(href='/', class=(currentPage === 'index' ? 'active' : '')) Home
+                        a.nav-link(href='index.html', class=(currentPage === 'index' ? 'active' : '')) Home
                     li.nav-item
-                        a.nav-link(href='ourvalues.html', class=(currentPage === 'ourvalues' ? 'active' : '')) Our values
-                    li.nav-item
-                        a.nav-link(href='products.html', class=(currentPage === 'products' ? 'active' : '')) Products
+                        a.nav-link(href='products.html', class=(currentPage === 'products' ? 'active' : '')) Shop for Products
                     li.nav-item
                         a.nav-link(href='aboutus.html', class=(currentPage === 'aboutus' ? 'active' : '')) About us
                     li.nav-item
-                        a.nav-link(href='faq.html', class=(currentPage === 'faq' ? 'active' : '')) FAQ
-                    li.nav-item
-                        a(href='#footer').nav-link Contact
+                        a.nav-link(href='aboutus.html', class=(currentPage === 'aboutus' ? 'active' : '')) Affiliate
                 i.mobile-nav-toggle.d-xl-none.bi.bi-list
             .cart-icons.d-flex
                 a.d-flex.align-items-center.me-3(href='#')

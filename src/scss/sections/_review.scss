@@ -1,0 +1,151 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# About Section
+--------------------------------------------------------------*/
+.review {
+
+  font-family: var(--default-font);
+  .pro-desc {
+    font-weight: 300;
+    line-height: 2;
+    font-size: 14px;
+    color: var(--regular-text-color);
+  }
+
+  h1 {
+    font-size: 2rem;
+    text-transform:uppercase;
+    font-weight: 200;
+    margin-bottom: 3rem;
+    letter-spacing: 5px;
+
+
+  }
+
+  /* Center and style the form container */
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  
+}
+
+/* Style the form title and header */
+h1, h2 {
+  color: #333;
+ 
+}
+
+h2 {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+/* Star Rating */
+.rating .star {
+  font-size: 1.5rem;
+  color: #ffd700; /* gold color for the stars */
+  cursor: pointer;
+  padding: 0 2px;
+}
+
+.rating .star:hover,
+.rating .star:hover ~ .star {
+  color: #ffc107; /* slightly darker shade on hover */
+}
+
+/* Form labels */
+.form-label {
+  font-weight: 300;
+  color: #555;
+}
+
+/* File upload and inputs */
+input[type="file"] {
+  border: 1px solid #ddd;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+textarea,
+input[type="text"],
+input[type="email"],
+select {
+  border-radius: 4px;
+}
+
+/* Checkbox styling */
+.form-check-input {
+  margin-right: 10px;
+}
+
+.form-check-label {
+  font-weight: 500;
+  color: #333;
+}
+
+/* Submit Button */
+button[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.form-check-label {
+  cursor: pointer;
+ 
+  border-radius: 0.25rem;
+  font-size: 12px;
+}
+
+.opt-items {
+  
+}
+.form-check-input:checked + .form-check-label.btn-outline-secondary {
+  background-color: #212529;
+  color: #fff;
+  border-color: #212529;
+}
+
+// Styling the "Agree & Submit" button
+.btn-submit {
+  background-color: var(--accent-color) !important;  // Black background color
+  color: #fff;  // White text color
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  width: 100%;  // Full-width button
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #333;  // Darker shade on hover
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+
+}

@@ -1,0 +1,227 @@
+doctype html
+html(lang='en')
+
+    head
+
+        meta(charset='utf-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+        meta(name='description', content='')
+        meta(name='author', content='')
+
+        title Le Gily - Home
+
+        // Favicon
+        link(rel='icon', type='image/x-icon', href='assets/logo.ico')
+
+        include includes/css.pug
+        include includes/navbar.pug
+
+    body.index-page
+        
+        // Call the navbar mixin with currentPage parameter
+        +navMixin('products')
+  
+        section#review.review.section
+            .container.mt-5
+                h1.text-center Review
+                .d-flex.align-items-center.pb-3 
+                    //- Product Image
+                    img(src="assets/legily/product-1.png" alt="Product Image" class="rounded me-3" style="width: 60px; height: 60px; object-fit: cover;")
+
+                    //- Product Details
+                    .d-flex.flex-column
+                        h5.mb-1 Anti-Stress Serum
+                        
+                        //- Star Rating
+                        .rating
+                            span.star &#9733;
+                            span.star &#9733;
+                            span.star &#9733;
+                            span.star &#9733;
+                            span.star &#9733;
+
+                form
+                    //- Review Title and Description
+                    .mb-3
+                       
+                        input#reviewTitle.form-control(type="text" placeholder="Review Title")
+
+                    .mb-3
+                        
+                        textarea#reviewDescription.form-control(rows="4" placeholder="Review Description")
+
+
+                    //- Add Photos or Videos
+                    .mb-3
+                        label(for="fileUpload" class="form-label") Add Photos or Videos
+                        input#fileUpload.form-control(type="file" multiple)
+
+                    //- User Profile
+                    .mb-3
+                        
+                        input#name.form-control(type="text" placeholder="Name")
+
+                    .mb-3
+                        
+                        input#email.form-control(type="email" placeholder="Email Address")
+
+                    //- Profile Picture
+                    .mb-3
+                        label(for="profilePicture" class="form-label") Profile Picture (Optional)
+                        input#profilePicture.form-control(type="file")
+
+                    //- My Skin Results
+                    .mb-3
+                        label.form-label My Skin Results (Choose up to 5 options)
+                        
+                        div.d-flex.flex-wrap.align-items-start.justify-content-start.gap-2.opt-items
+                            //- First row
+                            .me-2
+                                input.form-check-input.visually-hidden(type="checkbox" id="brighter")
+                                label.form-check-label.btn.btn-outline-secondary(for="brighter") Brighter
+
+                            .me-2
+                                input.form-check-input.visually-hidden(type="checkbox" id="smoother")
+                                label.form-check-label.btn.btn-outline-secondary(for="smoother") Smoother
+
+                            .me-2
+                                input.form-check-input.visually-hidden(type="checkbox" id="softer")
+                                label.form-check-label.btn.btn-outline-secondary(for="softer") Softer
+
+                            .me-2
+                                input.form-check-input.visually-hidden(type="checkbox" id="hydrated")
+                                label.form-check-label.btn.btn-outline-secondary(for="hydrated") Hydrated
+
+                            .me-2
+                                input.form-check-input.visually-hidden(type="checkbox" id="reduced-redness")
+                                label.form-check-label.btn.btn-outline-secondary(for="reduced-redness") Reduced redness
+
+                            .me-2
+                                input.form-check-input.visually-hidden(type="checkbox" id="improved-dark-spots")
+                                label.form-check-label.btn.btn-outline-secondary(for="improved-dark-spots") Improved dark spots
+
+                            //- Second row
+                            .me-2
+                                input.form-check-input.visually-hidden(type="checkbox" id="improved-blemishes")
+                                label.form-check-label.btn.btn-outline-secondary(for="improved-blemishes") Improved blemishes
+
+                            .me-2
+                                input.form-check-input.visually-hidden(type="checkbox" id="improved-lines")
+                                label.form-check-label.btn.btn-outline-secondary(for="improved-lines") Improved fine lines + wrinkles
+
+                            .me-2
+                                input.form-check-input.visually-hidden(type="checkbox" id="clearer")
+                                label.form-check-label.btn.btn-outline-secondary(for="clearer") Clearer
+
+                            .me-2
+                                input.form-check-input.visually-hidden(type="checkbox" id="glowing")
+                                label.form-check-label.btn.btn-outline-secondary(for="glowing") Glowing
+
+                            .me-2
+                                input.form-check-input.visually-hidden(type="checkbox" id="calmer")
+                                label.form-check-label.btn.btn-outline-secondary(for="calmer") Calmer
+
+                            //- Third row
+                            .me-2
+                                input.form-check-input.visually-hidden(type="checkbox" id="even-tone")
+                                label.form-check-label.btn.btn-outline-secondary(for="even-tone") Even skin tone
+
+                            .me-2
+                                input.form-check-input.visually-hidden(type="checkbox" id="firmer")
+                                label.form-check-label.btn.btn-outline-secondary(for="firmer") Firmer
+
+                            .me-2
+                                input.form-check-input.visually-hidden(type="checkbox" id="dark-circles")
+                                label.form-check-label.btn.btn-outline-secondary(for="dark-circles") Improved dark circles
+
+                            .me-2
+                                input.form-check-input.visually-hidden(type="checkbox" id="reduced-puffiness")
+                                label.form-check-label.btn.btn-outline-secondary(for="reduced-puffiness") Reduced puffiness
+
+
+                    //- Add additional checkboxes as shown in the image
+
+                    //- Age
+                    .mb-3
+                        label.form-label Age
+
+                        div.d-flex.flex-wrap.align-items-start.justify-content-start.gap-2.opt-items
+                            //- First row
+                            .me-2
+                                input.form-check-input.visually-hidden(type="checkbox" id="18-24")
+                                label.form-check-label.btn.btn-outline-secondary(for="18-24") 18-24
+                            .me-2
+                                input.form-check-input.visually-hidden(type="checkbox" id="25-34")
+                                label.form-check-label.btn.btn-outline-secondary(for="25-34") 25-34
+                            .me-2
+                                input.form-check-input.visually-hidden(type="checkbox" id="35-44")
+                                label.form-check-label.btn.btn-outline-secondary(for="35-44") 35-44
+                            .me-2
+                                input.form-check-input.visually-hidden(type="checkbox" id="45-54")
+                                label.form-check-label.btn.btn-outline-secondary(for="45-54") 45-54
+                            .me-2
+                                input.form-check-input.visually-hidden(type="checkbox" id="55")
+                                label.form-check-label.btn.btn-outline-secondary(for="55+") 55+
+
+                    //- Skin Type
+                    .mb-3
+                        label.form-label Skin Type
+
+                        div.d-flex.flex-wrap.align-items-start.justify-content-start.gap-2.opt-items
+                            //- First row
+                            .me-2
+                                input.form-check-input.visually-hidden(type="checkbox" id="dry")
+                                label.form-check-label.btn.btn-outline-secondary(for="dry") Dry
+                            .me-2
+                                input.form-check-input.visually-hidden(type="checkbox" id="normal")
+                                label.form-check-label.btn.btn-outline-secondary(for="normal") Normal
+                            .me-2
+                                input.form-check-input.visually-hidden(type="checkbox" id="oily")
+                                label.form-check-label.btn.btn-outline-secondary(for="oily") Oily
+                            .me-2
+                                input.form-check-input.visually-hidden(type="checkbox" id="combination")
+                                label.form-check-label.btn.btn-outline-secondary(for="combination") Combination
+                    //- Skin Concerns
+                    .mb-3
+                        label.form-label Skin Concerns (Choose up to 5 options)
+
+                        div.d-flex.flex-wrap.align-items-start.justify-content-start.gap-2.opt-items
+                            //- First row
+                            .me-2
+                                input.form-check-input.visually-hidden(type="checkbox" id="acne")
+                                label.form-check-label.btn.btn-outline-secondary(for="acne") Acne
+                            .me-2
+                                input.form-check-input.visually-hidden(type="checkbox" id="antiaging")
+                                label.form-check-label.btn.btn-outline-secondary(for="antiaging") Anti-Aging
+                            .me-2
+                                input.form-check-input.visually-hidden(type="checkbox" id="darkspots")
+                                label.form-check-label.btn.btn-outline-secondary(for="darkspots") Dark Spots
+                            .me-2
+                                input.form-check-input.visually-hidden(type="checkbox" id="dryness")
+                                label.form-check-label.btn.btn-outline-secondary(for="dryness") Dryness
+                            .me-2
+                                input.form-check-input.visually-hidden(type="checkbox" id="dullness")
+                                label.form-check-label.btn.btn-outline-secondary(for="dullness") Dullness
+                            .me-2
+                                input.form-check-input.visually-hidden(type="checkbox" id="oilness")
+                                label.form-check-label.btn.btn-outline-secondary(for="oilness") Oiliness
+                            .me-2
+                                input.form-check-input.visually-hidden(type="checkbox" id="pores")
+                                label.form-check-label.btn.btn-outline-secondary(for="pores") Pores
+                            .me-2
+                                input.form-check-input.visually-hidden(type="checkbox" id="55")
+                                label.form-check-label.btn.btn-outline-secondary(for="sensitivity") Sensitivity
+
+            .container.text-center
+                //- Terms and Conditions Text
+                p By continuing you agree to our 
+                    a(href="#") Terms and Conditions 
+                    | and 
+                    a(href="#") Privacy Policy
+
+                //- Agree & Submit Button
+                button.btn.btn-submit(type="submit") Agree & Submit
+        
+        include includes/footer.pug
+        
+        include includes/scripts.pug

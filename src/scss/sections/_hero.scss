@@ -10,7 +10,23 @@
   position: relative;
   display: flex;
   
+  
+          // Zoom In and Out Animation
+    @keyframes zoomInOut {
+      0% {
+        transform: scale(.95); // Original size
+      }
+      50% {
+        transform: scale(1); // Zoom in to 110%
+      }
+      100% {
+        transform: scale(.95); // Back to original size
+      }
+    }
 
+    .zoom-animation {
+      animation: zoomInOut 3s ease-in-out infinite; // Adjust duration as needed
+    }
 
   &:before {
     content: "";
@@ -27,12 +43,16 @@
   h2 {
     margin: 0;
     font-size: 56px;
-    font-weight: 500;
+    font-weight:300;
     font-family: var(--nav-font);
 
     span {
       color: var(--accent-color);
     }
+  }
+
+  .sub-bold {
+    font-weight: 700;
   }
 
   p {
@@ -101,7 +121,7 @@
   }
 
   .hero-text {
-    margin-top: 200px; /* Offset the text 30% below the top of hero-content */
+    margin-top: 150px; /* Offset the text 30% below the top of hero-content */
     display: flex;
    
     .left-content, .right-content {
@@ -144,6 +164,23 @@
     }
   }
   
+  .cta-sub {
+    font-family: var(--default-font);
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 12px 40px;
+    border-radius: 25px;
+    transition: 0.5s;
+    color: var(--surface-color);
+    background-color: var(--accent-color);
+
+    @media (max-width: 576px) { // Adjust max-width as needed for your breakpoint
+      padding: 0.25rem 0.5rem; // Smaller padding for mobile
+      font-size: 0.875rem; // Adjust font size for smaller screens
+    }
+  }
   .cta-btn:hover {
     background: var(--accent-color);
     color: var(--background-color);
@@ -153,14 +190,14 @@
   .cta-text {
     font-family: var(--default-font);
     font-weight: 400;
-    font-size: 15px;
+    font-size: 10px;
     color: var(--regular-text-color);
     padding-top: 40px;
     padding-bottom: 40px;
 
     p {
       width: 100%;
-      font-size: 15px;
+      font-size: 14px;
     }
   }
 
@@ -280,6 +317,36 @@
   }
   }
 
+  .cta-sub-area {
+    padding-top: 20px;
+    padding-bottom: 0px;
+  }
+
+  .input-group {
+    overflow: hidden;
+    width: 40% !important;
+    height: 60px !important;
+  }
+  
+  .input-group .form-control:focus {
+    box-shadow: none;
+  }
+  
+  // Remove the default input group styling
+  .input-group > .form-control {
+    border-radius: 25rem !important;
+  }
+  
+  // Remove default input group borders
+  .input-group-append {
+    margin-left: 0;
+  }
+  
+  .input-group:focus-within {
+    border-color: #86b7fe;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+  }
+
   
   @media (min-width: 1200px) {
     img {
@@ -287,6 +354,8 @@
       height: 951px; /* Set height */
       margin-left: auto; /* Center the hero section */
     }
+
+
   }
 
   @media (max-width: 1199px) {
