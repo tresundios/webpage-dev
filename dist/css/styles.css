@@ -1131,6 +1131,7 @@ h1 {
 .about img {
   width: 85%;
   height: auto;
+  border-radius: 25px;
 }
 .about h1 {
   font-size: 2rem;
