@@ -1,16 +1,7 @@
 /*!
 * Start Bootstrap - Le Gily v1 (undefined)
 * Copyright 2013-2024 Navis Michael Bearly J - Tresundios
-* Licensed under MIT (https://github.com/StartBootstrap/le-gily-project/blob/master/LICENSE)
 */
-/**
-* Template Name: Gp
-* Template URL: https://bootstrapmade.com/gp-free-multipurpose-html-bootstrap-template/
-* Updated: Aug 15 2024 with Bootstrap v5.3.3
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-
 (function() {
   "use strict";
 
